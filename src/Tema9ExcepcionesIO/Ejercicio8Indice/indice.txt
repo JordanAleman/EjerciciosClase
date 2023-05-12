@@ -1,0 +1,12 @@
+Con 3
+Dos 4
+Ejemplo 2
+En 6
+Es 2
+Estaban 6
+Este 2
+Pajar 6
+Tigre 1,3
+Tigres 4,5
+Tres 5
+Un 1,2,3,6
