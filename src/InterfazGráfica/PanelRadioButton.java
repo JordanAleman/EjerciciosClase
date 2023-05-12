@@ -1,5 +1,7 @@
 package InterfazGráfica;
 
+import java.awt.Component;
+import java.awt.Dimension;
 import java.util.ArrayList;
 
 import javax.swing.Box;
@@ -9,10 +11,11 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
 public class PanelRadioButton extends JPanel {
-    private ArrayList<JRadioButton> jrdRadioButtonsLista = new ArrayList<>();
+    private ArrayList<JRadioButton> jrbRadioButtonsLista = new ArrayList<>();
     private ArrayList<ButtonGroup> btgRadioButtonLista = new ArrayList<>();
+    private ArrayList<Component> struts = new ArrayList<>();
 
-    private JRadioButton jrdRadioButton;
+    private JRadioButton jrbRadioButton;
     private ButtonGroup btgRadioButton;
 
     /* ------------------------------- Constructor ------------------------------ */
@@ -23,10 +26,10 @@ public class PanelRadioButton extends JPanel {
      * <pre>
      * public PanelRadioButton() {
      *     btgRadioButton = new ButtonGroup();
-     *     jrdRadioButton = new JRadioButton();
+     *     jrbRadioButton = new JRadioButton();
      * 
-     *     btgRadioButton.add(jrdRadioButton);
-     *     add(jrdRadioButton);
+     *     btgRadioButton.add(jrbRadioButton);
+     *     add(jrbRadioButton);
      * }
      * </pre>
      * 
@@ -34,10 +37,10 @@ public class PanelRadioButton extends JPanel {
      */
     public PanelRadioButton() {
         btgRadioButton = new ButtonGroup();
-        jrdRadioButton = new JRadioButton();
+        jrbRadioButton = new JRadioButton();
 
-        btgRadioButton.add(jrdRadioButton);
-        add(jrdRadioButton);
+        btgRadioButton.add(jrbRadioButton);
+        add(jrbRadioButton);
     }
 
     /**
@@ -53,10 +56,10 @@ public class PanelRadioButton extends JPanel {
             etiquetaRadioButton = "";
 
         btgRadioButton = new ButtonGroup();
-        jrdRadioButton = new JRadioButton(etiquetaRadioButton);
+        jrbRadioButton = new JRadioButton(etiquetaRadioButton);
 
-        btgRadioButton.add(jrdRadioButton);
-        add(jrdRadioButton);
+        btgRadioButton.add(jrbRadioButton);
+        add(jrbRadioButton);
     }
 
     /**
@@ -75,9 +78,9 @@ public class PanelRadioButton extends JPanel {
             btgRadioButton = new ButtonGroup();
 
             for (int i = 0; i < cantidadRadioButtons; i++) {
-                jrdRadioButtonsLista.add(new JRadioButton());
-                btgRadioButton.add(jrdRadioButtonsLista.get(i));
-                add(jrdRadioButtonsLista.get(i));
+                jrbRadioButtonsLista.add(new JRadioButton());
+                btgRadioButton.add(jrbRadioButtonsLista.get(i));
+                add(jrbRadioButtonsLista.get(i));
             }
         }
     }
@@ -132,9 +135,9 @@ public class PanelRadioButton extends JPanel {
             btgRadioButton = new ButtonGroup();
 
             for (int i = 0; i < listaEtiquetasRadioButtons.length; i++) {
-                jrdRadioButtonsLista.add(new JRadioButton(listaEtiquetasRadioButtons[i]));
-                btgRadioButton.add(jrdRadioButtonsLista.get(i));
-                add(jrdRadioButtonsLista.get(i));
+                jrbRadioButtonsLista.add(new JRadioButton(listaEtiquetasRadioButtons[i]));
+                btgRadioButton.add(jrbRadioButtonsLista.get(i));
+                add(jrbRadioButtonsLista.get(i));
             }
         }
     }
@@ -195,10 +198,10 @@ public class PanelRadioButton extends JPanel {
             btgRadioButton = new ButtonGroup();
 
             for (int i = 0; i < listaEtiquetasRadioButtons.length; i++) {
-                jrdRadioButtonsLista.add(new JRadioButton(listaEtiquetasRadioButtons[i]));
-                btgRadioButton.add(jrdRadioButtonsLista.get(i));
-                add(jrdRadioButtonsLista.get(i));
-                add(Box.createVerticalStrut(5));
+                jrbRadioButtonsLista.add(new JRadioButton(listaEtiquetasRadioButtons[i]));
+                btgRadioButton.add(jrbRadioButtonsLista.get(i));
+                add(jrbRadioButtonsLista.get(i));
+                struts.add(add(Box.createVerticalStrut(5)));
             }
         } else
             new PanelButton(listaEtiquetasRadioButtons);
@@ -278,9 +281,9 @@ public class PanelRadioButton extends JPanel {
 
                 for (int j = 0,
                         k = recorridoLista; k < listaEtiquetasRadioButtons[i].length + recorridoLista; j++, k++) {
-                    jrdRadioButtonsLista.add(new JRadioButton(listaEtiquetasRadioButtons[i][j]));
-                    btgRadioButtonLista.get(i).add(jrdRadioButtonsLista.get(k));
-                    add(jrdRadioButtonsLista.get(k));
+                    jrbRadioButtonsLista.add(new JRadioButton(listaEtiquetasRadioButtons[i][j]));
+                    btgRadioButtonLista.get(i).add(jrbRadioButtonsLista.get(k));
+                    add(jrbRadioButtonsLista.get(k));
                 }
 
                 recorridoLista += listaEtiquetasRadioButtons[i].length;
@@ -291,23 +294,23 @@ public class PanelRadioButton extends JPanel {
 
     /* --------------------------------- Getter --------------------------------- */
     /**
-     * Devuelve el valor del atributo jrdRadioButtonsLista
+     * Devuelve el valor del atributo jrbRadioButtonsLista
      * 
      * <pre>
-     * private ArrayList<JRadioButton> jrdRadioButtonsLista
+     * private ArrayList<JRadioButton> jrbRadioButtonsLista;
      * </pre>
      * 
      * @return el campo {@code ArrayList<JRadioButton>}
      */
     public ArrayList<JRadioButton> getJrdRadioButtonsLista() {
-        return jrdRadioButtonsLista;
+        return jrbRadioButtonsLista;
     }
 
     /**
      * Devuelve el valor del atributo btgRadioButtonLista
      * 
      * <pre>
-     * private ArrayList<ButtonGroup>
+     * private ArrayList<ButtonGroup> btgRadioButtonLista;
      * </pre>
      * 
      * @return el campo {@code ArrayList<ButtonGroup>}
@@ -317,16 +320,30 @@ public class PanelRadioButton extends JPanel {
     }
 
     /**
-     * Devuelve el valor del atributo jrdRadioButton
+     * Devuelve el valor del atributo struts que contiene el tamaño de la distancia
+     * que hay entre cada {@code JRadioButton} en la alineación vertical
      * 
      * <pre>
-     * private JRadioButton jrdRadioButton;
+     * private ArrayList<Component> struts;
+     * </pre>
+     * 
+     * @return el campo {@code ArrayList<Component>}
+     */
+    public ArrayList<Component> getStruts() {
+        return struts;
+    }
+
+    /**
+     * Devuelve el valor del atributo jrbRadioButton
+     * 
+     * <pre>
+     * private JRadioButton jrbRadioButton;
      * </pre>
      * 
      * @return el campo {@code JRadioButton}
      */
     public JRadioButton getJrdRadioButton() {
-        return jrdRadioButton;
+        return jrbRadioButton;
     }
 
     /**
@@ -340,5 +357,35 @@ public class PanelRadioButton extends JPanel {
      */
     public ButtonGroup getBtgRadioButton() {
         return btgRadioButton;
+    }
+
+    /* ---------------------------- Modificar struts ---------------------------- */
+    /**
+     * Los "struts" indican el tamaño de separación que habrá entre cada
+     * {@code JRadioButton} cuando la alineación es vertical.
+     * 
+     * <pre>
+     * private ArrayList<Component> struts
+     * .
+     * .
+     * .
+     * struts.add(add(Box.createVerticalStrut(5)));
+     * </pre>
+     * 
+     * Ese tamaño de separación se cambiará según el valor indicado por parámetro
+     * 
+     * @param nuevoTamanio {@code int} nuevo tamaño de separación vertical en
+     *                     píxeles
+     */
+    public void modificarStruts(int nuevoTamanio) {
+        if (nuevoTamanio <= 0)
+            return;
+
+        for (Component strut : struts) {
+            Dimension newSize = new Dimension(strut.getPreferredSize().width, nuevoTamanio);
+            strut.setMinimumSize(newSize);
+            strut.setMaximumSize(newSize);
+            strut.setPreferredSize(newSize);
+        }
     }
 }

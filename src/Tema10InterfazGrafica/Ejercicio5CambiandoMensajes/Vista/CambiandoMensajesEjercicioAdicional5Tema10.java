@@ -7,6 +7,7 @@ import javax.swing.*;
 import InterfazGráfica.PanelTextArea;
 import InterfazGráfica.MarcoCentrado;
 import InterfazGráfica.PanelButton;
+import InterfazGráfica.PanelCheckBox;
 import InterfazGráfica.PanelRadioButton;
 import InterfazGráfica.PanelTextFieldLabel;
 import Tema10InterfazGrafica.Ejercicio5CambiandoMensajes.Controlador.JTextFieldKeyListener;
@@ -21,7 +22,7 @@ public class CambiandoMensajesEjercicioAdicional5Tema10 {
 class CambiandoMensajesEjercicioAdicional5Tema10MarcoInicial {
     /* ------------------------------- Constructor ------------------------------ */
     public CambiandoMensajesEjercicioAdicional5Tema10MarcoInicial() {
-        MarcoCentrado marcoInicial = new MarcoCentrado(460, 300, "Ejercicio adicional 5");
+        MarcoCentrado marcoInicial = new MarcoCentrado(460, 280, "Ejercicio adicional 5");
         marcoInicial.add(new CambiandoMensajesEjercicioAdicional5Tema10PanelPrincipal());
         marcoInicial.setResizable(false);
         marcoInicial.setVisible(true);
@@ -44,9 +45,10 @@ class CambiandoMensajesEjercicioAdicional5Tema10PanelPrincipal extends JPanel {
                 25, 2, 0, 2, 10);
         pnlNorte.getJtfCampo().setHorizontalAlignment(JTextField.RIGHT);
         pnlNorte.getJtfCampo().setText("Siguiente mensaje");
+        pnlNorte.getJtfCampo().setForeground(new Color(186, 195, 197));
 
         /* ------------------------------- Panel Oeste ------------------------------ */
-        pnlOeste = new PanelTextArea(10, 28, true);
+        pnlOeste = new PanelTextArea(10, 30, true);
         pnlOeste.getJtaAreaTexto().setEditable(false);
         pnlOeste.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createEmptyBorder(0, 5, 0, 0), // Establecer el margen izquierdo a 5 pixels
@@ -72,21 +74,26 @@ class CambiandoMensajesEjercicioAdicional5Tema10PanelPrincipal extends JPanel {
     /* -------------------- Panel este Radio y Check Buttons -------------------- */
     private class PanelEsteRadioCheckButtons extends JPanel {
         private PanelRadioButton pnlRadioButton;
+        private PanelCheckBox pnlCheckBox;
 
         /* ------------------------------- Constructor ------------------------------ */
         public PanelEsteRadioCheckButtons() {
-            String[] etiquetasButtons = { "Mayusculas", "Minusculas", "Normal" };
+            setLayout(new BorderLayout());
+            /* ----------------------------- Panel CheckBox ----------------------------- */
+            String[] etiquetasCheckBoxes = { "Negrita", "Cursiva" };
 
-            pnlRadioButton = new PanelRadioButton(etiquetasButtons, true);
-            add(pnlRadioButton);
+            pnlCheckBox = new PanelCheckBox(etiquetasCheckBoxes, true);
+            pnlCheckBox.setBorder(BorderFactory.createCompoundBorder(
+                    pnlCheckBox.getBorder(), // Establecer el margen izquierdo a 5 pixels
+                    BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(177, 191, 220))));
+
+            add(pnlCheckBox, BorderLayout.NORTH);
+
+            /* --------------------------- Panel RadioButtons --------------------------- */
+            String[] etiquetasRadioButtons = { "Mayusculas", "Minusculas", "Normal" };
+
+            pnlRadioButton = new PanelRadioButton(etiquetasRadioButtons, true);
+            add(pnlRadioButton, BorderLayout.SOUTH);
         }
-
-        // private class PanelRadioButtons extends JPanel {
-        // /* ------------------------------- Constructor ------------------------------
-        // */
-        // public PanelRadioButtons() {
-
-        // }
-        // }
     }
 }

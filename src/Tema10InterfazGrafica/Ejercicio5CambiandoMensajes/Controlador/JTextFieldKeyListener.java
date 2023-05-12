@@ -1,5 +1,6 @@
 package Tema10InterfazGrafica.Ejercicio5CambiandoMensajes.Controlador;
 
+import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -19,6 +20,7 @@ public class JTextFieldKeyListener implements KeyListener {
         if (e.getSource() instanceof JTextField campoTexto) {
             if (flagPrimeraVexJTextField) {
                 campoTexto.setText("");
+                campoTexto.setForeground(Color.BLACK);
                 flagPrimeraVexJTextField = false;
             }
         }
