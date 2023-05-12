@@ -46,7 +46,7 @@ class CambiandoMensajesEjercicioAdicional5Tema10PanelPrincipal extends JPanel {
         pnlNorte.getJtfCampo().setText("Siguiente mensaje");
 
         /* ------------------------------- Panel Oeste ------------------------------ */
-        pnlOeste = new PanelTextArea(10, 28);
+        pnlOeste = new PanelTextArea(10, 28, true);
         pnlOeste.getJtaAreaTexto().setEditable(false);
         pnlOeste.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createEmptyBorder(0, 5, 0, 0), // Establecer el margen izquierdo a 5 pixels
