@@ -8,7 +8,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class JTextFieldKeyListener implements KeyListener {
-    private boolean flagPrimeraVexJTextField = true;
+    private boolean flagSiguienteMensajeJTextField = true;
     private JTextArea areaTexto;
 
     public JTextFieldKeyListener(JTextArea areaTexto) {
@@ -18,10 +18,10 @@ public class JTextFieldKeyListener implements KeyListener {
     @Override
     public void keyTyped(KeyEvent e) {
         if (e.getSource() instanceof JTextField campoTexto) {
-            if (flagPrimeraVexJTextField) {
+            if (flagSiguienteMensajeJTextField) {
                 campoTexto.setText("");
                 campoTexto.setForeground(Color.BLACK);
-                flagPrimeraVexJTextField = false;
+                flagSiguienteMensajeJTextField = false;
             }
         }
     }
@@ -35,7 +35,9 @@ public class JTextFieldKeyListener implements KeyListener {
         if (e.getSource() instanceof JTextField campoTexto) {
             if (e.getKeyCode() == KeyEvent.VK_ENTER && campoTexto.getText().length() > 0) {
                 areaTexto.setText(areaTexto.getText() + campoTexto.getText() + "\n");
-                campoTexto.setText("");
+                campoTexto.setText("Siguiente mensaje");
+                campoTexto.setForeground(new Color(186, 195, 197));
+                flagSiguienteMensajeJTextField = true;   
             }
         }
     }

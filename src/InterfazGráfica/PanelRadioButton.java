@@ -2,6 +2,7 @@ package InterfazGráfica;
 
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.GridLayout;
 import java.util.ArrayList;
 
 import javax.swing.Box;
@@ -45,8 +46,8 @@ public class PanelRadioButton extends JPanel {
 
     /**
      * Crea un panel con un RadioButton de tipo {@link JRadioButton} con una
-     * etiqueta pasada por parámetro dentro de un
-     * ButtonGroup del tipo {@link ButtonGroup}
+     * etiqueta pasada por parámetro dentro de un ButtonGroup del tipo
+     * {@link ButtonGroup}
      * 
      * @param etiquetaRadioButton {@code String} nombre de la etiqueta del
      *                            {@code JRadioButton}
@@ -109,9 +110,8 @@ public class PanelRadioButton extends JPanel {
      * </li>
      * <li>
      * Si el <b>tamaño del array es igual a 1</b> se creará un simple
-     * {@code JRadioButton}
-     * con etiqueta igual al único contenido del array dentro de un
-     * {@code ButtonGroup}
+     * {@code JRadioButton} con etiqueta igual al único contenido del array dentro
+     * de un {@code ButtonGroup}
      * </li>
      * <li>
      * Si el <b>tamaño del array es superior a 1</b> se creará una lista de
@@ -202,6 +202,146 @@ public class PanelRadioButton extends JPanel {
                 btgRadioButton.add(jrbRadioButtonsLista.get(i));
                 add(jrbRadioButtonsLista.get(i));
                 struts.add(add(Box.createVerticalStrut(5)));
+            }
+        } else
+            new PanelButton(listaEtiquetasRadioButtons);
+    }
+
+    /**
+     * Crea un panel con una cierta cantidad pasada por parámetro de RadioButton de
+     * tipo {@link JRadioButton} dentro de un ButtonGroup del tipo
+     * {@link ButtonGroup}.
+     * Tiene un segundo y tercer parámetro que indican un tipo de GridLayout que
+     * tendrán los {@code JRadioButton}
+     * 
+     * <ul>
+     * <li>
+     * La cantidad de {@code JRadioButton} que se crean está definido por el tamaño
+     * del array que se pasa por parámetro
+     * </li>
+     * <li>
+     * Los etiquetas de los {@code JRadioButton} son cada uno de los valores del
+     * array pasado por parámetro
+     * </li>
+     * </ul>
+     * 
+     * <h4>Consideraciones con el array pasado por parámetro</h4>
+     * <ul>
+     * <li>
+     * Si el <b>tamaño del array es menor o igual a 0</b> se creará un simple
+     * {@code JRadioButton} sin etiqueta dentro de un {@code ButtonGroup}
+     * </li>
+     * <li>
+     * Si el <b>tamaño del array es igual a 1</b> se creará un simple
+     * {@code JRadioButton}
+     * con etiqueta igual al único contenido del array dentro de un
+     * {@code ButtonGroup}
+     * </li>
+     * <li>
+     * Si el <b>tamaño del array es superior a 1</b> se creará una lista de
+     * {@code JRadioButton} igual al tamaño del array, cada uno con el nombre de
+     * cada posición del array. Todo se añadirá a un {@code ButtonGroup}
+     * </li>
+     * </ul>
+     * <hr>
+     * 
+     * @param listaEtiquetasRadioButtons {@code String[]} array de etiquetas para
+     *                                   los {@code JRadioButton}
+     * @param fila                       {@code int} Número de filas del
+     *                                   GridLayout
+     * @param columna                    {@code int} Número de columnas del
+     *                                   GridLayout
+     */
+    public PanelRadioButton(String[] listaEtiquetasRadioButtons, int fila, int columna) {
+        if (listaEtiquetasRadioButtons.length <= 0)
+            new PanelRadioButton();
+
+        if (listaEtiquetasRadioButtons.length == 1)
+            new PanelRadioButton(listaEtiquetasRadioButtons[0]);
+
+        if (listaEtiquetasRadioButtons.length > 1) {
+            setLayout(new GridLayout(fila, columna, 5, 5));
+
+            btgRadioButton = new ButtonGroup();
+
+            for (int i = 0; i < listaEtiquetasRadioButtons.length; i++) {
+                jrbRadioButtonsLista.add(new JRadioButton(listaEtiquetasRadioButtons[i]));
+                btgRadioButton.add(jrbRadioButtonsLista.get(i));
+                add(jrbRadioButtonsLista.get(i));
+            }
+        } else
+            new PanelButton(listaEtiquetasRadioButtons);
+    }
+
+    /**
+     * Crea un panel con una cierta cantidad pasada por parámetro de RadioButton de
+     * tipo {@link JRadioButton} dentro de un ButtonGroup del tipo
+     * {@link ButtonGroup}.
+     * Lo siguientes parámetros son los mismos que los de un
+     * 
+     * <pre>
+     * new GridLayout(row, column, hgap, vgap)
+     * </pre>
+     * 
+     * <ul>
+     * <li>
+     * La cantidad de {@code JRadioButton} que se crean está definido por el tamaño
+     * del array que se pasa por parámetro
+     * </li>
+     * <li>
+     * Los etiquetas de los {@code JRadioButton} son cada uno de los valores del
+     * array pasado por parámetro
+     * </li>
+     * </ul>
+     * 
+     * <h4>Consideraciones con el array pasado por parámetro</h4>
+     * <ul>
+     * <li>
+     * Si el <b>tamaño del array es menor o igual a 0</b> se creará un simple
+     * {@code JRadioButton} sin etiqueta dentro de un {@code ButtonGroup}
+     * </li>
+     * <li>
+     * Si el <b>tamaño del array es igual a 1</b> se creará un simple
+     * {@code JRadioButton}
+     * con etiqueta igual al único contenido del array dentro de un
+     * {@code ButtonGroup}
+     * </li>
+     * <li>
+     * Si el <b>tamaño del array es superior a 1</b> se creará una lista de
+     * {@code JRadioButton} igual al tamaño del array, cada uno con el nombre de
+     * cada posición del array. Todo se añadirá a un {@code ButtonGroup}
+     * </li>
+     * </ul>
+     * <hr>
+     * 
+     * @param listaEtiquetasRadioButtons {@code String[]} array de etiquetas para
+     *                                   los {@code JRadioButton}
+     * @param fila                       {@code int} Número de filas del
+     *                                   GridLayout
+     * @param columna                    {@code int} Número de columnas del
+     *                                   GridLayout
+     * @param hgap                       {@code int} Tamaño de separación en píxeles
+     *                                   entre columnas
+     * @param vgap                       {@code int} Tamaño de separación en píxeles
+     *                                   entre filas
+     * @see java.awt.GridLayout
+     */
+    public PanelRadioButton(String[] listaEtiquetasRadioButtons, int fila, int columna, int hgap, int vgap) {
+        if (listaEtiquetasRadioButtons.length <= 0)
+            new PanelRadioButton();
+
+        if (listaEtiquetasRadioButtons.length == 1)
+            new PanelRadioButton(listaEtiquetasRadioButtons[0]);
+
+        if (listaEtiquetasRadioButtons.length > 1) {
+            setLayout(new GridLayout(fila, columna, hgap, vgap));
+
+            btgRadioButton = new ButtonGroup();
+
+            for (int i = 0; i < listaEtiquetasRadioButtons.length; i++) {
+                jrbRadioButtonsLista.add(new JRadioButton(listaEtiquetasRadioButtons[i]));
+                btgRadioButton.add(jrbRadioButtonsLista.get(i));
+                add(jrbRadioButtonsLista.get(i));
             }
         } else
             new PanelButton(listaEtiquetasRadioButtons);

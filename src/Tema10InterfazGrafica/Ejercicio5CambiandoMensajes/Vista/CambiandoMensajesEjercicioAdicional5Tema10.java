@@ -1,7 +1,6 @@
 package Tema10InterfazGrafica.Ejercicio5CambiandoMensajes.Vista;
 
 import java.awt.*;
-
 import javax.swing.*;
 
 import InterfazGráfica.PanelTextArea;
@@ -22,7 +21,7 @@ public class CambiandoMensajesEjercicioAdicional5Tema10 {
 class CambiandoMensajesEjercicioAdicional5Tema10MarcoInicial {
     /* ------------------------------- Constructor ------------------------------ */
     public CambiandoMensajesEjercicioAdicional5Tema10MarcoInicial() {
-        MarcoCentrado marcoInicial = new MarcoCentrado(460, 280, "Ejercicio adicional 5");
+        MarcoCentrado marcoInicial = new MarcoCentrado(470, 280, "Ejercicio adicional 5");
         marcoInicial.add(new CambiandoMensajesEjercicioAdicional5Tema10PanelPrincipal());
         marcoInicial.setResizable(false);
         marcoInicial.setVisible(true);
@@ -42,20 +41,21 @@ class CambiandoMensajesEjercicioAdicional5Tema10PanelPrincipal extends JPanel {
 
         /* ------------------------------- Panel Norte ------------------------------ */
         pnlNorte = new PanelTextFieldLabel("Introduzca un mensaje",
-                25, 2, 0, 2, 10);
-        pnlNorte.getJtfCampo().setHorizontalAlignment(JTextField.RIGHT);
+                26, 2, 0, 2, 10);
         pnlNorte.getJtfCampo().setText("Siguiente mensaje");
+        pnlNorte.getJtfCampo().setHorizontalAlignment(JTextField.RIGHT);
         pnlNorte.getJtfCampo().setForeground(new Color(186, 195, 197));
 
         /* ------------------------------- Panel Oeste ------------------------------ */
         pnlOeste = new PanelTextArea(10, 30, true);
         pnlOeste.getJtaAreaTexto().setEditable(false);
         pnlOeste.setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createEmptyBorder(0, 5, 0, 0), // Establecer el margen izquierdo a 5 pixels
+                BorderFactory.createEmptyBorder(0, 5, 0, 0),
                 BorderFactory.createLineBorder(new Color(169, 179, 189))));
 
         /* ------------------------------- Panel Este ------------------------------- */
         pnlEste = new PanelEsteRadioCheckButtons();
+        pnlEste.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 10));
 
         /* -------------------------------- Panel Sur ------------------------------- */
         String[] nombreBotones = { "Por defecto", "Rojo", "Azul", "Amarillo", "Verde" };
@@ -84,7 +84,7 @@ class CambiandoMensajesEjercicioAdicional5Tema10PanelPrincipal extends JPanel {
 
             pnlCheckBox = new PanelCheckBox(etiquetasCheckBoxes, true);
             pnlCheckBox.setBorder(BorderFactory.createCompoundBorder(
-                    pnlCheckBox.getBorder(), // Establecer el margen izquierdo a 5 pixels
+                    pnlCheckBox.getBorder(),
                     BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(177, 191, 220))));
 
             add(pnlCheckBox, BorderLayout.NORTH);
