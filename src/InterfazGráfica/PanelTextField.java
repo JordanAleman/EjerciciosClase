@@ -7,8 +7,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class PanelTextField extends JPanel {
-    private ArrayList<JTextField> jtfCampoLista = new ArrayList<>();
-    private JTextField jtfCampo;
+    private ArrayList<JTextField> txtCampoLista = new ArrayList<>();
+    private JTextField txtCampo;
 
     /* ------------------------------- Constructor ------------------------------ */
     /**
@@ -16,14 +16,14 @@ public class PanelTextField extends JPanel {
      * 
      * <pre>
      * public PanelTextField() {
-     *     jtfCampo = new JTextField(20);
-     *     add(jtfCampo);
+     *     txtCampo = new JTextField(20);
+     *     add(txtCampo);
      * }
      * </pre>
      */
     public PanelTextField() {
-        jtfCampo = new JTextField(20);
-        add(jtfCampo);
+        txtCampo = new JTextField(20);
+        add(txtCampo);
     }
 
     /**
@@ -37,8 +37,8 @@ public class PanelTextField extends JPanel {
         if (tamanioCampo < 1)
             tamanioCampo = 1;
 
-        jtfCampo = new JTextField(tamanioCampo);
-        add(jtfCampo);
+        txtCampo = new JTextField(tamanioCampo);
+        add(txtCampo);
     }
 
     /**
@@ -63,8 +63,8 @@ public class PanelTextField extends JPanel {
             cantidadCampos = 1;
 
         for (int i = 0; i < cantidadCampos; i++) {
-            jtfCampoLista.add(new JTextField(tamanioCampo));
-            add(jtfCampoLista.get(i));
+            txtCampoLista.add(new JTextField(tamanioCampo));
+            add(txtCampoLista.get(i));
         }
     }
 
@@ -107,9 +107,9 @@ public class PanelTextField extends JPanel {
         if (marginRight < 0)
             marginRight = 0;
 
-        jtfCampo = new JTextField(tamanioCampo);
-        jtfCampo.setMargin(new Insets(marginTop, marginLeft, marginBottom, marginRight));
-        add(jtfCampo);
+        txtCampo = new JTextField(tamanioCampo);
+        txtCampo.setMargin(new Insets(marginTop, marginLeft, marginBottom, marginRight));
+        add(txtCampo);
     }
 
     /**
@@ -160,37 +160,37 @@ public class PanelTextField extends JPanel {
             marginRight = 0;
 
         for (int i = 0; i < cantidadCampos; i++) {
-            jtfCampoLista.add(new JTextField(tamanioCampo));
-            jtfCampoLista.get(i).setMargin(new Insets(marginTop, marginLeft, marginBottom, marginRight));
-            add(jtfCampoLista.get(i));
+            txtCampoLista.add(new JTextField(tamanioCampo));
+            txtCampoLista.get(i).setMargin(new Insets(marginTop, marginLeft, marginBottom, marginRight));
+            add(txtCampoLista.get(i));
         }
     }
 
     /* --------------------------------- Getter --------------------------------- */
     /**
-     * Devuelve el valor del atributo jtfCampoLista
+     * Devuelve el valor del atributo txtCampoLista
      * 
      * <pre>
-     * private ArrayList<JTextField> jtfCampoLista;
+     * private ArrayList<JTextField> txtCampoLista;
      * </pre>
      * 
      * @return el campo {@code ArrayList<JTextField>}
      */
-    public ArrayList<JTextField> getJtfCampoLista() {
-        return jtfCampoLista;
+    public ArrayList<JTextField> getTxtCampoLista() {
+        return txtCampoLista;
     }
 
     /**
-     * Devuelve el valor del atributo jtfCampo
+     * Devuelve el valor del atributo txtCampo
      * 
      * <pre>
-     * private JTextField jtfCampo;
+     * private JTextField txtCampo;
      * </pre>
      * 
      * @return el campo {@code JTextField}
      */
-    public JTextField getJtfCampo() {
-        return jtfCampo;
+    public JTextField getTxtCampo() {
+        return txtCampo;
     }
 
     /* ------------------------------ Manejar texto ----------------------------- */
@@ -200,7 +200,7 @@ public class PanelTextField extends JPanel {
      * @param texto {@code String} que será mandado
      */
     public void addTexto(String texto) {
-        jtfCampo.setText(jtfCampo.getText() + texto);
+        txtCampo.setText(txtCampo.getText() + texto);
     }
 
     /**
@@ -212,10 +212,10 @@ public class PanelTextField extends JPanel {
      *                      {@code JTextField} al que se le quiere pasar el texto
      */
     public void addTexto(String texto, int posicionCampo) {
-        if (posicionCampo < 0 || posicionCampo >= jtfCampoLista.size())
+        if (posicionCampo < 0 || posicionCampo >= txtCampoLista.size())
             return;
 
-        jtfCampoLista.get(posicionCampo).setText(jtfCampoLista.get(posicionCampo).getText() + texto);
+        txtCampoLista.get(posicionCampo).setText(txtCampoLista.get(posicionCampo).getText() + texto);
     }
 
     /**
@@ -223,8 +223,8 @@ public class PanelTextField extends JPanel {
      * 
      */
     public void eliminarTexto() {
-        if (jtfCampo.getText().length() > 0)
-            jtfCampo.setText(jtfCampo.getText().substring(0, jtfCampo.getText().length() - 1));
+        if (txtCampo.getText().length() > 0)
+            txtCampo.setText(txtCampo.getText().substring(0, txtCampo.getText().length() - 1));
     }
 
     /**
@@ -236,20 +236,20 @@ public class PanelTextField extends JPanel {
      *                      último dígito
      */
     public void eliminarTexto(int posicionCampo) {
-        if (posicionCampo < 0 || posicionCampo >= jtfCampoLista.size())
+        if (posicionCampo < 0 || posicionCampo >= txtCampoLista.size())
             return;
 
-        if (jtfCampoLista.get(posicionCampo).getText().length() > 0)
-            jtfCampoLista.get(posicionCampo).setText(
-                    jtfCampoLista.get(posicionCampo).getText().substring(
-                            0, jtfCampoLista.get(posicionCampo).getText().length() - 1));
+        if (txtCampoLista.get(posicionCampo).getText().length() > 0)
+            txtCampoLista.get(posicionCampo).setText(
+                    txtCampoLista.get(posicionCampo).getText().substring(
+                            0, txtCampoLista.get(posicionCampo).getText().length() - 1));
     }
 
     /**
      * Elimina todo el texto del campo del {@code JTextField}
      */
     public void limpiarTexto() {
-        jtfCampo.setText("");
+        txtCampo.setText("");
     }
 
     /**
@@ -262,10 +262,10 @@ public class PanelTextField extends JPanel {
      * 
      */
     public void limpiarTexto(int posicionCampo) {
-        if (posicionCampo < 0 || posicionCampo >= jtfCampoLista.size())
+        if (posicionCampo < 0 || posicionCampo >= txtCampoLista.size())
             return;
 
-        jtfCampoLista.get(posicionCampo).setText("");
+        txtCampoLista.get(posicionCampo).setText("");
     }
 
     /**
@@ -277,7 +277,7 @@ public class PanelTextField extends JPanel {
      */
     public void limpiarTexto(boolean todo) {
         if (todo) {
-            for (JTextField jTextField : jtfCampoLista)
+            for (JTextField jTextField : txtCampoLista)
                 jTextField.setText("");
         }
     }

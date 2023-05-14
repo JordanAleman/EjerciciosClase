@@ -13,11 +13,11 @@ import javax.swing.JRadioButton;
 
 public class PanelRadioButton extends JPanel {
     private ArrayList<JRadioButton> jrbRadioButtonsLista = new ArrayList<>();
-    private ArrayList<ButtonGroup> btgRadioButtonLista = new ArrayList<>();
+    private ArrayList<ButtonGroup> rdbRadioButtonLista = new ArrayList<>();
     private ArrayList<Component> struts = new ArrayList<>();
 
     private JRadioButton jrbRadioButton;
-    private ButtonGroup btgRadioButton;
+    private ButtonGroup rdbRadioButton;
 
     /* ------------------------------- Constructor ------------------------------ */
     /**
@@ -26,10 +26,10 @@ public class PanelRadioButton extends JPanel {
      * 
      * <pre>
      * public PanelRadioButton() {
-     *     btgRadioButton = new ButtonGroup();
+     *     rdbRadioButton = new ButtonGroup();
      *     jrbRadioButton = new JRadioButton();
      * 
-     *     btgRadioButton.add(jrbRadioButton);
+     *     rdbRadioButton.add(jrbRadioButton);
      *     add(jrbRadioButton);
      * }
      * </pre>
@@ -37,10 +37,10 @@ public class PanelRadioButton extends JPanel {
      * @apiNote El {@code JRadioButton} se crea sin etiqueta
      */
     public PanelRadioButton() {
-        btgRadioButton = new ButtonGroup();
+        rdbRadioButton = new ButtonGroup();
         jrbRadioButton = new JRadioButton();
 
-        btgRadioButton.add(jrbRadioButton);
+        rdbRadioButton.add(jrbRadioButton);
         add(jrbRadioButton);
     }
 
@@ -56,10 +56,10 @@ public class PanelRadioButton extends JPanel {
         if (etiquetaRadioButton == null)
             etiquetaRadioButton = "";
 
-        btgRadioButton = new ButtonGroup();
+        rdbRadioButton = new ButtonGroup();
         jrbRadioButton = new JRadioButton(etiquetaRadioButton);
 
-        btgRadioButton.add(jrbRadioButton);
+        rdbRadioButton.add(jrbRadioButton);
         add(jrbRadioButton);
     }
 
@@ -76,11 +76,11 @@ public class PanelRadioButton extends JPanel {
         if (cantidadRadioButtons <= 1)
             new PanelRadioButton();
         else {
-            btgRadioButton = new ButtonGroup();
+            rdbRadioButton = new ButtonGroup();
 
             for (int i = 0; i < cantidadRadioButtons; i++) {
                 jrbRadioButtonsLista.add(new JRadioButton());
-                btgRadioButton.add(jrbRadioButtonsLista.get(i));
+                rdbRadioButton.add(jrbRadioButtonsLista.get(i));
                 add(jrbRadioButtonsLista.get(i));
             }
         }
@@ -132,11 +132,11 @@ public class PanelRadioButton extends JPanel {
             new PanelRadioButton(listaEtiquetasRadioButtons[0]);
 
         if (listaEtiquetasRadioButtons.length > 1) {
-            btgRadioButton = new ButtonGroup();
+            rdbRadioButton = new ButtonGroup();
 
             for (int i = 0; i < listaEtiquetasRadioButtons.length; i++) {
                 jrbRadioButtonsLista.add(new JRadioButton(listaEtiquetasRadioButtons[i]));
-                btgRadioButton.add(jrbRadioButtonsLista.get(i));
+                rdbRadioButton.add(jrbRadioButtonsLista.get(i));
                 add(jrbRadioButtonsLista.get(i));
             }
         }
@@ -195,11 +195,11 @@ public class PanelRadioButton extends JPanel {
             new PanelRadioButton(listaEtiquetasRadioButtons[0]);
 
         if (listaEtiquetasRadioButtons.length > 1 && alineacionVertical) {
-            btgRadioButton = new ButtonGroup();
+            rdbRadioButton = new ButtonGroup();
 
             for (int i = 0; i < listaEtiquetasRadioButtons.length; i++) {
                 jrbRadioButtonsLista.add(new JRadioButton(listaEtiquetasRadioButtons[i]));
-                btgRadioButton.add(jrbRadioButtonsLista.get(i));
+                rdbRadioButton.add(jrbRadioButtonsLista.get(i));
                 add(jrbRadioButtonsLista.get(i));
                 struts.add(add(Box.createVerticalStrut(5)));
             }
@@ -262,11 +262,11 @@ public class PanelRadioButton extends JPanel {
         if (listaEtiquetasRadioButtons.length > 1) {
             setLayout(new GridLayout(fila, columna, 5, 5));
 
-            btgRadioButton = new ButtonGroup();
+            rdbRadioButton = new ButtonGroup();
 
             for (int i = 0; i < listaEtiquetasRadioButtons.length; i++) {
                 jrbRadioButtonsLista.add(new JRadioButton(listaEtiquetasRadioButtons[i]));
-                btgRadioButton.add(jrbRadioButtonsLista.get(i));
+                rdbRadioButton.add(jrbRadioButtonsLista.get(i));
                 add(jrbRadioButtonsLista.get(i));
             }
         } else
@@ -336,11 +336,11 @@ public class PanelRadioButton extends JPanel {
         if (listaEtiquetasRadioButtons.length > 1) {
             setLayout(new GridLayout(fila, columna, hgap, vgap));
 
-            btgRadioButton = new ButtonGroup();
+            rdbRadioButton = new ButtonGroup();
 
             for (int i = 0; i < listaEtiquetasRadioButtons.length; i++) {
                 jrbRadioButtonsLista.add(new JRadioButton(listaEtiquetasRadioButtons[i]));
-                btgRadioButton.add(jrbRadioButtonsLista.get(i));
+                rdbRadioButton.add(jrbRadioButtonsLista.get(i));
                 add(jrbRadioButtonsLista.get(i));
             }
         } else
@@ -417,12 +417,12 @@ public class PanelRadioButton extends JPanel {
             int recorridoLista = 0;
 
             for (int i = 0; i < listaEtiquetasRadioButtons.length; i++) {
-                btgRadioButtonLista.add(new ButtonGroup());
+                rdbRadioButtonLista.add(new ButtonGroup());
 
                 for (int j = 0,
                         k = recorridoLista; k < listaEtiquetasRadioButtons[i].length + recorridoLista; j++, k++) {
                     jrbRadioButtonsLista.add(new JRadioButton(listaEtiquetasRadioButtons[i][j]));
-                    btgRadioButtonLista.get(i).add(jrbRadioButtonsLista.get(k));
+                    rdbRadioButtonLista.get(i).add(jrbRadioButtonsLista.get(k));
                     add(jrbRadioButtonsLista.get(k));
                 }
 
@@ -442,21 +442,21 @@ public class PanelRadioButton extends JPanel {
      * 
      * @return el campo {@code ArrayList<JRadioButton>}
      */
-    public ArrayList<JRadioButton> getJrdRadioButtonsLista() {
+    public ArrayList<JRadioButton> getJrbRadioButtonsLista() {
         return jrbRadioButtonsLista;
     }
 
     /**
-     * Devuelve el valor del atributo btgRadioButtonLista
+     * Devuelve el valor del atributo rdbRadioButtonLista
      * 
      * <pre>
-     * private ArrayList<ButtonGroup> btgRadioButtonLista;
+     * private ArrayList<ButtonGroup> rdbRadioButtonLista;
      * </pre>
      * 
      * @return el campo {@code ArrayList<ButtonGroup>}
      */
-    public ArrayList<ButtonGroup> getBtgRadioButtonLista() {
-        return btgRadioButtonLista;
+    public ArrayList<ButtonGroup> getRdbRadioButtonLista() {
+        return rdbRadioButtonLista;
     }
 
     /**
@@ -482,21 +482,21 @@ public class PanelRadioButton extends JPanel {
      * 
      * @return el campo {@code JRadioButton}
      */
-    public JRadioButton getJrdRadioButton() {
+    public JRadioButton getJrbRadioButton() {
         return jrbRadioButton;
     }
 
     /**
-     * Devuelve el valor del atributo btgRadioButton
+     * Devuelve el valor del atributo rdbRadioButton
      * 
      * <pre>
-     * private ButtonGroup btgRadioButton;
+     * private ButtonGroup rdbRadioButton;
      * </pre>
      * 
      * @return el campo {@code ButtonGroup}
      */
-    public ButtonGroup getBtgRadioButton() {
-        return btgRadioButton;
+    public ButtonGroup getRdbRadioButton() {
+        return rdbRadioButton;
     }
 
     /* ---------------------------- Modificar struts ---------------------------- */

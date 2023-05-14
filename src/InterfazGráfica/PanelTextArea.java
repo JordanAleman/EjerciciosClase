@@ -4,7 +4,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 public class PanelTextArea extends JPanel {
-    private JTextArea jtaAreaTexto;
+    private JTextArea txaAreaTexto;
 
     /* ------------------------------- Constructor ------------------------------ */
     /**
@@ -12,14 +12,14 @@ public class PanelTextArea extends JPanel {
      * 
      * <pre>
      * public PanelTextArea() {
-     *     jtaAreaTexto = new JTextArea(5, 20);
-     *     add(jtaAreaTexto);
+     *     txaAreaTexto = new JTextArea(5, 20);
+     *     add(txaAreaTexto);
      * }
      * </pre>
      */
     public PanelTextArea() {
-        jtaAreaTexto = new JTextArea(5, 20);
-        add(jtaAreaTexto);
+        txaAreaTexto = new JTextArea(5, 20);
+        add(txaAreaTexto);
     }
 
     /**
@@ -38,10 +38,10 @@ public class PanelTextArea extends JPanel {
         if (textoDefecto == null)
             textoDefecto = "";
 
-        jtaAreaTexto = new JTextArea(5, 20);
-        jtaAreaTexto.setText(textoDefecto);
+        txaAreaTexto = new JTextArea(5, 20);
+        txaAreaTexto.setText(textoDefecto);
 
-        add(jtaAreaTexto);
+        add(txaAreaTexto);
     }
 
     /**
@@ -57,12 +57,12 @@ public class PanelTextArea extends JPanel {
      * @param lineWrap {@code boolean} indianco si será true el linewrap
      */
     public PanelTextArea(boolean lineWrap) {
-        jtaAreaTexto = new JTextArea(5, 20);
+        txaAreaTexto = new JTextArea(5, 20);
 
         if (lineWrap)
-            jtaAreaTexto.setLineWrap(true);
+            txaAreaTexto.setLineWrap(true);
 
-        add(jtaAreaTexto);
+        add(txaAreaTexto);
     }
 
     /**
@@ -83,13 +83,13 @@ public class PanelTextArea extends JPanel {
         if (textoDefecto == null)
             textoDefecto = "";
 
-        jtaAreaTexto = new JTextArea(5, 20);
-        jtaAreaTexto.setText(textoDefecto);
+        txaAreaTexto = new JTextArea(5, 20);
+        txaAreaTexto.setText(textoDefecto);
 
         if (lineWrap)
-            jtaAreaTexto.setLineWrap(true);
+            txaAreaTexto.setLineWrap(true);
 
-        add(jtaAreaTexto);
+        add(txaAreaTexto);
     }
 
     /**
@@ -107,8 +107,8 @@ public class PanelTextArea extends JPanel {
         if (columnas < 1)
             columnas = 1;
 
-        jtaAreaTexto = new JTextArea(filas, columnas);
-        add(jtaAreaTexto);
+        txaAreaTexto = new JTextArea(filas, columnas);
+        add(txaAreaTexto);
     }
 
     /**
@@ -133,10 +133,10 @@ public class PanelTextArea extends JPanel {
         if (textoDefecto == null)
             textoDefecto = "";
 
-        jtaAreaTexto = new JTextArea(filas, columnas);
-        jtaAreaTexto.setText(textoDefecto);
+        txaAreaTexto = new JTextArea(filas, columnas);
+        txaAreaTexto.setText(textoDefecto);
 
-        add(jtaAreaTexto);
+        add(txaAreaTexto);
     }
 
     /**
@@ -158,12 +158,12 @@ public class PanelTextArea extends JPanel {
         if (columnas < 1)
             columnas = 1;
 
-        jtaAreaTexto = new JTextArea(filas, columnas);
+        txaAreaTexto = new JTextArea(filas, columnas);
 
         if (lineWrap)
-            jtaAreaTexto.setLineWrap(true);
+            txaAreaTexto.setLineWrap(true);
 
-        add(jtaAreaTexto);
+        add(txaAreaTexto);
     }
 
     /**
@@ -190,26 +190,26 @@ public class PanelTextArea extends JPanel {
         if (textoDefecto == null)
             textoDefecto = "";
 
-        jtaAreaTexto = new JTextArea(filas, columnas);
-        jtaAreaTexto.setText(textoDefecto);
+        txaAreaTexto = new JTextArea(filas, columnas);
+        txaAreaTexto.setText(textoDefecto);
 
         if (lineWrap)
-            jtaAreaTexto.setLineWrap(true);
+            txaAreaTexto.setLineWrap(true);
 
-        add(jtaAreaTexto);
+        add(txaAreaTexto);
     }
 
     /* --------------------------------- Getter --------------------------------- */
     /**
-     * Devuelve el valor del atributo jtaAreaTexto
+     * Devuelve el valor del atributo txaAreaTexto
      * 
      * <pre>
-     * private JTextArea jtaAreaTexto;
+     * private JTextArea txaAreaTexto;
      * </pre>
      * 
      * @return el campo {@code JTextArea}
      */
-    public JTextArea getJtaAreaTexto() {
-        return jtaAreaTexto;
+    public JTextArea getTxaAreaTexto() {
+        return txaAreaTexto;
     }
 }

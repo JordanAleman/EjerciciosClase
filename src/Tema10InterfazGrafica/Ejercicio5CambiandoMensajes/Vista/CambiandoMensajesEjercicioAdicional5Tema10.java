@@ -21,9 +21,11 @@ public class CambiandoMensajesEjercicioAdicional5Tema10 {
 class CambiandoMensajesEjercicioAdicional5Tema10MarcoInicial {
     /* ------------------------------- Constructor ------------------------------ */
     public CambiandoMensajesEjercicioAdicional5Tema10MarcoInicial() {
-        MarcoCentrado marcoInicial = new MarcoCentrado(470, 280, "Ejercicio adicional 5");
+        MarcoCentrado marcoInicial = new MarcoCentrado("Ejercicio adicional 5");
         marcoInicial.add(new CambiandoMensajesEjercicioAdicional5Tema10PanelPrincipal());
         marcoInicial.setResizable(false);
+        marcoInicial.pack();
+
         marcoInicial.setVisible(true);
     }
 }
@@ -42,13 +44,13 @@ class CambiandoMensajesEjercicioAdicional5Tema10PanelPrincipal extends JPanel {
         /* ------------------------------- Panel Norte ------------------------------ */
         pnlNorte = new PanelTextFieldLabel("Introduzca un mensaje",
                 26, 2, 0, 2, 10);
-        pnlNorte.getJtfCampo().setText("Siguiente mensaje");
-        pnlNorte.getJtfCampo().setHorizontalAlignment(JTextField.RIGHT);
-        pnlNorte.getJtfCampo().setForeground(new Color(186, 195, 197));
+        pnlNorte.getTxtCampo().setText("Siguiente mensaje");
+        pnlNorte.getTxtCampo().setHorizontalAlignment(JTextField.RIGHT);
+        pnlNorte.getTxtCampo().setForeground(new Color(186, 195, 197));
 
         /* ------------------------------- Panel Oeste ------------------------------ */
         pnlOeste = new PanelTextArea(10, 30, true);
-        pnlOeste.getJtaAreaTexto().setEditable(false);
+        pnlOeste.getTxaAreaTexto().setEditable(false);
         pnlOeste.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createEmptyBorder(0, 5, 0, 0),
                 BorderFactory.createLineBorder(new Color(169, 179, 189))));
@@ -62,7 +64,7 @@ class CambiandoMensajesEjercicioAdicional5Tema10PanelPrincipal extends JPanel {
         pnlSur = new PanelButton(nombreBotones);
 
         /* ---------------------------- Controlar eventos --------------------------- */
-        pnlNorte.getJtfCampo().addKeyListener(new JTextFieldKeyListener(pnlOeste.getJtaAreaTexto()));
+        pnlNorte.getTxtCampo().addKeyListener(new JTextFieldKeyListener(pnlOeste.getTxaAreaTexto()));
 
         /* ----------------------------- Añadir paneles ----------------------------- */
         add(pnlNorte, BorderLayout.NORTH);

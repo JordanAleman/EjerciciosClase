@@ -7,8 +7,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class PanelTextFieldLabel extends JPanel {
-    private JTextField jtfCampo;
-    private JLabel jlbEtiqueta;
+    private JTextField txtCampo;
+    private JLabel lblEtiqueta;
 
     /* ------------------------------- Constructor ------------------------------ */
     /**
@@ -32,11 +32,11 @@ public class PanelTextFieldLabel extends JPanel {
         if (nombreEtiqueta == null)
             nombreEtiqueta = "";
 
-        jlbEtiqueta = new JLabel(nombreEtiqueta);
-        jtfCampo = new JTextField(20);
+        lblEtiqueta = new JLabel(nombreEtiqueta);
+        txtCampo = new JTextField(20);
 
-        add(jlbEtiqueta);
-        add(jtfCampo);
+        add(lblEtiqueta);
+        add(txtCampo);
     }
 
     /**
@@ -62,15 +62,15 @@ public class PanelTextFieldLabel extends JPanel {
         if (nombreEtiqueta == null)
             nombreEtiqueta = "";
 
-        jlbEtiqueta = new JLabel(nombreEtiqueta);
-        jtfCampo = new JTextField(20);
+        lblEtiqueta = new JLabel(nombreEtiqueta);
+        txtCampo = new JTextField(20);
 
         if (etiquetaDerecha) {
-            add(jtfCampo);
-            add(jlbEtiqueta);
+            add(txtCampo);
+            add(lblEtiqueta);
         } else {
-            add(jtfCampo);
-            add(jlbEtiqueta);
+            add(txtCampo);
+            add(lblEtiqueta);
         }
     }
 
@@ -100,11 +100,11 @@ public class PanelTextFieldLabel extends JPanel {
         if (tamanioCampo < 1)
             tamanioCampo = 1;
 
-        jlbEtiqueta = new JLabel(nombreEtiqueta);
-        jtfCampo = new JTextField(tamanioCampo);
+        lblEtiqueta = new JLabel(nombreEtiqueta);
+        txtCampo = new JTextField(tamanioCampo);
 
-        add(jlbEtiqueta);
-        add(jtfCampo);
+        add(lblEtiqueta);
+        add(txtCampo);
     }
 
     /**
@@ -137,15 +137,15 @@ public class PanelTextFieldLabel extends JPanel {
         if (tamanioCampo < 1)
             tamanioCampo = 1;
 
-        jlbEtiqueta = new JLabel(nombreEtiqueta);
-        jtfCampo = new JTextField(tamanioCampo);
+        lblEtiqueta = new JLabel(nombreEtiqueta);
+        txtCampo = new JTextField(tamanioCampo);
 
         if (etiquetaDerecha) {
-            add(jtfCampo);
-            add(jlbEtiqueta);
+            add(txtCampo);
+            add(lblEtiqueta);
         } else {
-            add(jtfCampo);
-            add(jlbEtiqueta);
+            add(txtCampo);
+            add(lblEtiqueta);
         }
     }
 
@@ -199,12 +199,12 @@ public class PanelTextFieldLabel extends JPanel {
         if (marginRight < 0)
             marginRight = 0;
 
-        jlbEtiqueta = new JLabel(nombreEtiqueta);
-        jtfCampo = new JTextField(tamanioCampo);
-        jtfCampo.setMargin(new Insets(marginTop, marginLeft, marginBottom, marginRight));
+        lblEtiqueta = new JLabel(nombreEtiqueta);
+        txtCampo = new JTextField(tamanioCampo);
+        txtCampo.setMargin(new Insets(marginTop, marginLeft, marginBottom, marginRight));
 
-        add(jlbEtiqueta);
-        add(jtfCampo);
+        add(lblEtiqueta);
+        add(txtCampo);
     }
 
     /**
@@ -260,55 +260,55 @@ public class PanelTextFieldLabel extends JPanel {
         if (marginRight < 0)
             marginRight = 0;
 
-        jlbEtiqueta = new JLabel(nombreEtiqueta);
-        jtfCampo = new JTextField(tamanioCampo);
-        jtfCampo.setMargin(new Insets(marginTop, marginLeft, marginBottom, marginRight));
+        lblEtiqueta = new JLabel(nombreEtiqueta);
+        txtCampo = new JTextField(tamanioCampo);
+        txtCampo.setMargin(new Insets(marginTop, marginLeft, marginBottom, marginRight));
 
         if (etiquetaDerecha) {
-            add(jtfCampo);
-            add(jlbEtiqueta);
+            add(txtCampo);
+            add(lblEtiqueta);
         } else {
-            add(jtfCampo);
-            add(jlbEtiqueta);
+            add(txtCampo);
+            add(lblEtiqueta);
         }
     }
 
     /* --------------------------------- Getter --------------------------------- */
     /**
-     * Devuelve el valor del atributo jtfCampo
+     * Devuelve el valor del atributo txtCampo
      * <pre>
-     * private JTextField jtfCampo;
+     * private JTextField txtCampo;
      * </pre>
      * 
      * @return el campo {@code JTextField}
      */
-    public JTextField getJtfCampo() {
-        return jtfCampo;
+    public JTextField getTxtCampo() {
+        return txtCampo;
     }
 
     /**
-     * Devuelve el valor del atributo jlbEtiqueta
+     * Devuelve el valor del atributo lblEtiqueta
      * <pre>
-     * private JLabel jlbEtiqueta;
+     * private JLabel lblEtiqueta;
      * </pre>
      * 
      * @return el campo {@code JLabel}
      */
-    public JLabel getJlbEtiqueta() {
-        return jlbEtiqueta;
+    public JLabel getLblEtiqueta() {
+        return lblEtiqueta;
     }
 
     /* ------------------------------ Manejar texto ----------------------------- */
     public void addTexto(String texto) {
-        jtfCampo.setText(jtfCampo.getText() + texto);
+        txtCampo.setText(txtCampo.getText() + texto);
     }
 
     public void eliminarTexto() {
-        if (jtfCampo.getText().length() > 0)
-            jtfCampo.setText(jtfCampo.getText().substring(0, jtfCampo.getText().length() - 1));
+        if (txtCampo.getText().length() > 0)
+            txtCampo.setText(txtCampo.getText().substring(0, txtCampo.getText().length() - 1));
     }
 
     public void limpiarTexto() {
-        jtfCampo.setText("");
+        txtCampo.setText("");
     }
 }

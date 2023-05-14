@@ -1,10 +1,7 @@
 // import Expresiones.rexExp;
 
-import java.awt.GridLayout;
+import java.awt.GraphicsEnvironment;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 public class App {
 
@@ -144,21 +141,9 @@ public class App {
 
         // System.out.println(Character.isISOControl('?'));
         // System.out.println("2p".matches("\\d"));
-        JFrame frame = new JFrame("GridLayout Example");
-        JPanel panel = new JPanel();
-        
-        // Establecer un GridLayout con 2 filas, 3 columnas y un espacio de 10 píxeles entre columnas
-        panel.setLayout(new GridLayout(2, 3, 200, 0));
-        
-        panel.add(new JButton("Botón 1"));
-        panel.add(new JButton("Botón 2"));
-        panel.add(new JButton("Botón 3"));
-        panel.add(new JButton("Botón 4"));
-        panel.add(new JButton("Botón 5"));
-        panel.add(new JButton("Botón 6"));
-        
-        frame.getContentPane().add(panel);
-        frame.pack();
-        frame.setVisible(true);
+        String[] fontNames = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
+        for (String fontName : fontNames) {
+          System.out.println(fontName);
+        }
     }
 }

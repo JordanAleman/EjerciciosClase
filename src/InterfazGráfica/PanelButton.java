@@ -7,8 +7,8 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class PanelButton extends JPanel {
-    private ArrayList<JButton> jtbBotonLista = new ArrayList<>();
-    private JButton jtbBoton;
+    private ArrayList<JButton> btnBotonLista = new ArrayList<>();
+    private JButton btnBoton;
 
     /* ------------------------------- Constructor ------------------------------ */
     /**
@@ -16,9 +16,9 @@ public class PanelButton extends JPanel {
      * 
      */
     public PanelButton() {
-        jtbBoton = new JButton();
-        jtbBoton.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        add(jtbBoton);
+        btnBoton = new JButton();
+        btnBoton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        add(btnBoton);
 
     }
 
@@ -30,9 +30,9 @@ public class PanelButton extends JPanel {
      * 
      */
     public PanelButton(String nombreBoton) {
-        jtbBoton = new JButton(nombreBoton);
-        jtbBoton.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        add(jtbBoton);
+        btnBoton = new JButton(nombreBoton);
+        btnBoton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        add(btnBoton);
     }
 
     /**
@@ -47,9 +47,9 @@ public class PanelButton extends JPanel {
             new PanelButton();
         } else {
             for (int i = 0; i < cantidadBotones; i++) {
-                jtbBotonLista.add(new JButton());
-                jtbBotonLista.get(i).setCursor(new Cursor(Cursor.HAND_CURSOR));
-                add(jtbBotonLista.get(i));
+                btnBotonLista.add(new JButton());
+                btnBotonLista.get(i).setCursor(new Cursor(Cursor.HAND_CURSOR));
+                add(btnBotonLista.get(i));
             }
         }
     }
@@ -74,35 +74,35 @@ public class PanelButton extends JPanel {
 
         if (listaNombresBotones.length > 1) {
             for (int i = 0; i < listaNombresBotones.length; i++) {
-                jtbBotonLista.add(new JButton(listaNombresBotones[i]));
-                jtbBotonLista.get(i).setCursor(new Cursor(Cursor.HAND_CURSOR));
-                add(jtbBotonLista.get(i));
+                btnBotonLista.add(new JButton(listaNombresBotones[i]));
+                btnBotonLista.get(i).setCursor(new Cursor(Cursor.HAND_CURSOR));
+                add(btnBotonLista.get(i));
             }
         }
     }
 
     /* --------------------------------- Getter --------------------------------- */
     /**
-     * Devuelve el valor del atributo jtbBotonLista
+     * Devuelve el valor del atributo btnBotonLista
      * <pre>
-     * private ArrayList<JButton> jtbBotonLista 
+     * private ArrayList<JButton> btnBotonLista 
      * </pre>
      * 
      * @return el ArrayList de botones {@code ArrayList<JButton>}
      */
-    public ArrayList<JButton> getJtbBotonLista() {
-        return jtbBotonLista;
+    public ArrayList<JButton> getBtnBotonLista() {
+        return btnBotonLista;
     }
 
     /**
      * Devuelve el valor del atributo JButton
      * <pre>
-     * private JButton jtbBoton;
+     * private JButton btnBoton;
      * </pre>
      * 
      * @return el botón {@code JButton}
      */
-    public JButton getJtbBoton() {
-        return jtbBoton;
+    public JButton getBtnBoton() {
+        return btnBoton;
     }
 }

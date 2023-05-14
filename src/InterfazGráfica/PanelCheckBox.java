@@ -7,8 +7,8 @@ import javax.swing.JCheckBox;
 import javax.swing.JPanel;
 
 public class PanelCheckBox extends JPanel {
-    private ArrayList<JCheckBox> jcbCheckBoxLista = new ArrayList<>();
-    private JCheckBox jcbCheckBox;
+    private ArrayList<JCheckBox> cbxCheckBoxLista = new ArrayList<>();
+    private JCheckBox cbxCheckBox;
 
     /* ------------------------------- Constructor ------------------------------ */
     /**
@@ -16,16 +16,16 @@ public class PanelCheckBox extends JPanel {
      * 
      * <pre>
      * public PanelCheckBox() {
-     *     jcbCheckBox = new JCheckBox();
-     *     add(jcbCheckBox);
+     *     cbxCheckBox = new JCheckBox();
+     *     add(cbxCheckBox);
      * }
      * </pre>
      * 
      * @apiNote El {@code JCheckBox} se crea sin etiqueta
      */
     public PanelCheckBox() {
-        jcbCheckBox = new JCheckBox();
-        add(jcbCheckBox);
+        cbxCheckBox = new JCheckBox();
+        add(cbxCheckBox);
     }
 
     /**
@@ -40,8 +40,8 @@ public class PanelCheckBox extends JPanel {
         if (etiquetaCheckBox == null)
             etiquetaCheckBox = "";
 
-        jcbCheckBox = new JCheckBox(etiquetaCheckBox);
-        add(jcbCheckBox);
+        cbxCheckBox = new JCheckBox(etiquetaCheckBox);
+        add(cbxCheckBox);
 
     }
 
@@ -90,8 +90,8 @@ public class PanelCheckBox extends JPanel {
 
         if (listaEtiquetasCheckBox.length > 1) {
             for (int i = 0; i < listaEtiquetasCheckBox.length; i++) {
-                jcbCheckBoxLista.add(new JCheckBox(listaEtiquetasCheckBox[i]));
-                add(jcbCheckBoxLista.get(i));
+                cbxCheckBoxLista.add(new JCheckBox(listaEtiquetasCheckBox[i]));
+                add(cbxCheckBoxLista.get(i));
             }
         }
     }
@@ -147,8 +147,8 @@ public class PanelCheckBox extends JPanel {
             setLayout(new GridLayout(listaEtiquetasCheckBox.length, 1));
 
             for (int i = 0; i < listaEtiquetasCheckBox.length; i++) {
-                jcbCheckBoxLista.add(new JCheckBox(listaEtiquetasCheckBox[i]));
-                add(jcbCheckBoxLista.get(i));
+                cbxCheckBoxLista.add(new JCheckBox(listaEtiquetasCheckBox[i]));
+                add(cbxCheckBoxLista.get(i));
             }
         } else
             new PanelCheckBox(listaEtiquetasCheckBox);
@@ -203,16 +203,16 @@ public class PanelCheckBox extends JPanel {
             new PanelCheckBox(listaEtiquetasCheckBox[0]);
 
         if ((listaEtiquetasCheckBox.length <= 0 || listaEtiquetasCheckBox.length == 1) && cualSelected == 0)
-            jcbCheckBox.setSelected(true);
+            cbxCheckBox.setSelected(true);
 
         if (listaEtiquetasCheckBox.length > 1) {
             for (int i = 0; i < listaEtiquetasCheckBox.length; i++) {
-                jcbCheckBoxLista.add(new JCheckBox(listaEtiquetasCheckBox[i]));
+                cbxCheckBoxLista.add(new JCheckBox(listaEtiquetasCheckBox[i]));
 
                 if (cualSelected == i)
-                    jcbCheckBoxLista.get(i).setSelected(true);
+                    cbxCheckBoxLista.get(i).setSelected(true);
 
-                add(jcbCheckBoxLista.get(i));
+                add(cbxCheckBoxLista.get(i));
             }
         }
     }
@@ -270,18 +270,18 @@ public class PanelCheckBox extends JPanel {
             new PanelCheckBox(listaEtiquetasCheckBox[0]);
 
         if ((listaEtiquetasCheckBox.length <= 0 || listaEtiquetasCheckBox.length == 1) && cualSelected == 0)
-            jcbCheckBox.setSelected(true);
+            cbxCheckBox.setSelected(true);
 
         if (listaEtiquetasCheckBox.length > 1 && alineacionVertical) {
             setLayout(new GridLayout(listaEtiquetasCheckBox.length, 1));
 
             for (int i = 0; i < listaEtiquetasCheckBox.length; i++) {
-                jcbCheckBoxLista.add(new JCheckBox(listaEtiquetasCheckBox[i]));
+                cbxCheckBoxLista.add(new JCheckBox(listaEtiquetasCheckBox[i]));
 
                 if (cualSelected == i)
-                    jcbCheckBoxLista.get(i).setSelected(true);
+                    cbxCheckBoxLista.get(i).setSelected(true);
 
-                add(jcbCheckBoxLista.get(i));
+                add(cbxCheckBoxLista.get(i));
             }
         } else
             new PanelCheckBox(listaEtiquetasCheckBox, cualSelected);
@@ -348,20 +348,20 @@ public class PanelCheckBox extends JPanel {
         }
 
         if ((listaEtiquetasCheckBox.length <= 0 || listaEtiquetasCheckBox.length == 1) && posicion0)
-            jcbCheckBox.setSelected(true);
+            cbxCheckBox.setSelected(true);
 
         if (listaEtiquetasCheckBox.length > 1) {
             for (int i = 0; i < listaEtiquetasCheckBox.length; i++) {
-                jcbCheckBoxLista.add(new JCheckBox(listaEtiquetasCheckBox[i]));
+                cbxCheckBoxLista.add(new JCheckBox(listaEtiquetasCheckBox[i]));
 
                 for (int j = 0; j < cualSelected.length; j++) {
                     if (cualSelected[j] == i) {
-                        jcbCheckBoxLista.get(i).setSelected(true);
+                        cbxCheckBoxLista.get(i).setSelected(true);
                         break;
                     }
                 }
 
-                add(jcbCheckBoxLista.get(i));
+                add(cbxCheckBoxLista.get(i));
             }
         }
     }
@@ -431,22 +431,22 @@ public class PanelCheckBox extends JPanel {
         }
 
         if ((listaEtiquetasCheckBox.length <= 0 || listaEtiquetasCheckBox.length == 1) && posicion0)
-            jcbCheckBox.setSelected(true);
+            cbxCheckBox.setSelected(true);
 
         if (listaEtiquetasCheckBox.length > 1 && alineacionVertical) {
             setLayout(new GridLayout(listaEtiquetasCheckBox.length, 1));
 
             for (int i = 0; i < listaEtiquetasCheckBox.length; i++) {
-                jcbCheckBoxLista.add(new JCheckBox(listaEtiquetasCheckBox[i]));
+                cbxCheckBoxLista.add(new JCheckBox(listaEtiquetasCheckBox[i]));
 
                 for (int j = 0; j < cualSelected.length; j++) {
                     if (cualSelected[j] == i) {
-                        jcbCheckBoxLista.get(i).setSelected(true);
+                        cbxCheckBoxLista.get(i).setSelected(true);
                         break;
                     }
                 }
 
-                add(jcbCheckBoxLista.get(i));
+                add(cbxCheckBoxLista.get(i));
             }
         } else {
             new PanelCheckBox(listaEtiquetasCheckBox, cualSelected);
@@ -455,28 +455,28 @@ public class PanelCheckBox extends JPanel {
 
     /* --------------------------------- Getters -------------------------------- */
     /**
-     * Devuelve el valor del atributo jcbCheckBoxLista
+     * Devuelve el valor del atributo cbxCheckBoxLista
      * 
      * <pre>
-     * private ArrayList<JCheckBox> jcbCheckBoxLista;
+     * private ArrayList<JCheckBox> cbxCheckBoxLista;
      * </pre>
      * 
      * @return el campo {@code ArrayList<JCheckBox>}
      */
-    public ArrayList<JCheckBox> getJcbCheckBoxLista() {
-        return jcbCheckBoxLista;
+    public ArrayList<JCheckBox> getCbxCheckBoxLista() {
+        return cbxCheckBoxLista;
     }
 
     /**
-     * Devuelve el valor del atributo jcbCheckBox
+     * Devuelve el valor del atributo cbxCheckBox
      * 
      * <pre>
-     * private JCheckBox jcbCheckBox;
+     * private JCheckBox cbxCheckBox;
      * </pre>
      * 
      * @return el campo {@code JCheckBox}
      */
-    public JCheckBox getJcbCheckBox() {
-        return jcbCheckBox;
+    public JCheckBox getCbxCheckBox() {
+        return cbxCheckBox;
     }
 }
