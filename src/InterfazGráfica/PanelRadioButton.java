@@ -201,7 +201,7 @@ public class PanelRadioButton extends JPanel {
                 jrbRadioButtonsLista.add(new JRadioButton(listaEtiquetasRadioButtons[i]));
                 rdbRadioButton.add(jrbRadioButtonsLista.get(i));
                 add(jrbRadioButtonsLista.get(i));
-                struts.add(add(Box.createVerticalStrut(5)));
+                struts.add(add(Box.createVerticalStrut(2)));
             }
         } else
             new PanelButton(listaEtiquetasRadioButtons);

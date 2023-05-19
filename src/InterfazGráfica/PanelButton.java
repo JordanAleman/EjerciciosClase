@@ -105,4 +105,8 @@ public class PanelButton extends JPanel {
     public JButton getBtnBoton() {
         return btnBoton;
     }
+
+    public JButton getBtnBotonForIndex(int pos) {
+        return btnBotonLista.get(pos);
+    }
 }

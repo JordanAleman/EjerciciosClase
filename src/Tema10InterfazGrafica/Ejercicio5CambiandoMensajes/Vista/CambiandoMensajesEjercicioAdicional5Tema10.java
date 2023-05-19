@@ -3,12 +3,14 @@ package Tema10InterfazGrafica.Ejercicio5CambiandoMensajes.Vista;
 import java.awt.*;
 import javax.swing.*;
 
-import InterfazGráfica.PanelTextArea;
-import InterfazGráfica.MarcoCentrado;
+import InterfazGráfica.PanelTextAreaScroll;
 import InterfazGráfica.PanelButton;
 import InterfazGráfica.PanelCheckBox;
 import InterfazGráfica.PanelRadioButton;
 import InterfazGráfica.PanelTextFieldLabel;
+import Tema10InterfazGrafica.Ejercicio5CambiandoMensajes.Controlador.JButtonsMouseListener;
+import Tema10InterfazGrafica.Ejercicio5CambiandoMensajes.Controlador.JCheckBoxActionListener;
+import Tema10InterfazGrafica.Ejercicio5CambiandoMensajes.Controlador.JRadioButtonItemListener;
 import Tema10InterfazGrafica.Ejercicio5CambiandoMensajes.Controlador.JTextFieldKeyListener;
 
 public class CambiandoMensajesEjercicioAdicional5Tema10 {
@@ -18,22 +20,25 @@ public class CambiandoMensajesEjercicioAdicional5Tema10 {
 }
 
 /* ------------------------------ Marco inicial ----------------------------- */
-class CambiandoMensajesEjercicioAdicional5Tema10MarcoInicial {
+class CambiandoMensajesEjercicioAdicional5Tema10MarcoInicial extends JFrame {
     /* ------------------------------- Constructor ------------------------------ */
     public CambiandoMensajesEjercicioAdicional5Tema10MarcoInicial() {
-        MarcoCentrado marcoInicial = new MarcoCentrado("Ejercicio adicional 5");
-        marcoInicial.add(new CambiandoMensajesEjercicioAdicional5Tema10PanelPrincipal());
-        marcoInicial.setResizable(false);
-        marcoInicial.pack();
+        setTitle("Ejercicio adicional 5");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        marcoInicial.setVisible(true);
+        add(new CambiandoMensajesEjercicioAdicional5Tema10PanelPrincipal());
+
+        pack();
+        setLocationRelativeTo(null);
+        setResizable(false);
+        setVisible(true);
     }
 }
 
 /* ----------------------------- Panel principal ---------------------------- */
 class CambiandoMensajesEjercicioAdicional5Tema10PanelPrincipal extends JPanel {
     private PanelTextFieldLabel pnlNorte;
-    private PanelTextArea pnlOeste;
+    private PanelTextAreaScroll pnlOeste;
     private PanelEsteRadioCheckButtons pnlEste;
     private PanelButton pnlSur;
 
@@ -49,11 +54,13 @@ class CambiandoMensajesEjercicioAdicional5Tema10PanelPrincipal extends JPanel {
         pnlNorte.getTxtCampo().setForeground(new Color(186, 195, 197));
 
         /* ------------------------------- Panel Oeste ------------------------------ */
-        pnlOeste = new PanelTextArea(10, 30, true);
+        pnlOeste = new PanelTextAreaScroll(10, 30, true);
         pnlOeste.getTxaAreaTexto().setEditable(false);
-        pnlOeste.setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createEmptyBorder(0, 5, 0, 0),
-                BorderFactory.createLineBorder(new Color(169, 179, 189))));
+        pnlOeste.getTxaAreaTexto().setBorder(BorderFactory.createCompoundBorder(
+                BorderFactory.createLineBorder(new Color(169, 179, 189)),
+                BorderFactory.createEmptyBorder(2, 5, 0, 5)));
+
+        pnlOeste.getTxaAreaTexto().setMargin(new Insets(2, 50, 0, 5));
 
         /* ------------------------------- Panel Este ------------------------------- */
         pnlEste = new PanelEsteRadioCheckButtons();
@@ -62,9 +69,31 @@ class CambiandoMensajesEjercicioAdicional5Tema10PanelPrincipal extends JPanel {
         /* -------------------------------- Panel Sur ------------------------------- */
         String[] nombreBotones = { "Por defecto", "Rojo", "Azul", "Amarillo", "Verde" };
         pnlSur = new PanelButton(nombreBotones);
+        pnlSur.getBtnBotonForIndex(1).setBackground(Color.RED);
+        pnlSur.getBtnBotonForIndex(1).setForeground(Color.WHITE);
+
+        pnlSur.getBtnBotonForIndex(2).setBackground(Color.BLUE);
+        pnlSur.getBtnBotonForIndex(2).setForeground(Color.WHITE);
+
+        pnlSur.getBtnBotonForIndex(3).setBackground(Color.YELLOW);
+        pnlSur.getBtnBotonForIndex(4).setBackground(Color.GREEN);
 
         /* ---------------------------- Controlar eventos --------------------------- */
+        /* ------------------------------ Evento norte ------------------------------ */
         pnlNorte.getTxtCampo().addKeyListener(new JTextFieldKeyListener(pnlOeste.getTxaAreaTexto()));
+
+        /* ------------------------------- Evento Sur ------------------------------- */
+        for (JButton boton : pnlSur.getBtnBotonLista())
+            boton.addMouseListener(new JButtonsMouseListener(pnlOeste.getTxaAreaTexto()));
+
+        /* ------------------------------- Evento Este ------------------------------ */
+        for (JCheckBox checkButton : pnlEste.pnlCheckBox.getCbxCheckBoxLista())
+            checkButton.addActionListener(new JCheckBoxActionListener(pnlOeste.getTxaAreaTexto()));
+
+        for (JRadioButton radioButton : pnlEste.pnlRadioButton.getJrbRadioButtonsLista())
+            radioButton.addItemListener(new JRadioButtonItemListener(pnlOeste.getTxaAreaTexto()));
+
+        // 22YPCr2w
 
         /* ----------------------------- Añadir paneles ----------------------------- */
         add(pnlNorte, BorderLayout.NORTH);
@@ -89,12 +118,19 @@ class CambiandoMensajesEjercicioAdicional5Tema10PanelPrincipal extends JPanel {
                     pnlCheckBox.getBorder(),
                     BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(177, 191, 220))));
 
+            for (JCheckBox checkBox : pnlCheckBox.getCbxCheckBoxLista())
+                checkBox.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
             add(pnlCheckBox, BorderLayout.NORTH);
 
             /* --------------------------- Panel RadioButtons --------------------------- */
             String[] etiquetasRadioButtons = { "Mayusculas", "Minusculas", "Normal" };
 
             pnlRadioButton = new PanelRadioButton(etiquetasRadioButtons, true);
+
+            for (JRadioButton radioButton : pnlRadioButton.getJrbRadioButtonsLista())
+                radioButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
             add(pnlRadioButton, BorderLayout.SOUTH);
         }
     }

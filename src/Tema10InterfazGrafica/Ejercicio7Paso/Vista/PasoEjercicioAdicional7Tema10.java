@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSlider;
 import javax.swing.JSpinner;
-import javax.swing.SpinnerNumberModel;
+import javax.swing.SpinnerListModel;
 
 import InterfazGráfica.MarcoCentrado;
 
@@ -46,7 +46,7 @@ class PasoEjercicioAdicional7Tema10PanelPrincipal extends JPanel {
         pnlInferior = new PanelInferior();
 
         add(pnlSuperior, BorderLayout.NORTH);
-        add(pnlInferior, BorderLayout.SOUTH);
+        add(pnlInferior, BorderLayout.CENTER);
     }
 
     /* ----------------------------- Panel Superior ----------------------------- */
@@ -113,12 +113,12 @@ class PasoEjercicioAdicional7Tema10PanelPrincipal extends JPanel {
                 /* ------------------------------ JSlider Paso ------------------------------ */
                 sldPaso = new JSlider(JSlider.HORIZONTAL, 1, 5, 1);
                 sldPaso.setMajorTickSpacing(1);
-                sldPaso.setMinorTickSpacing(0);
-                sldPaso.setPaintTicks(false); // sin esta instruccion no se ven las marcas
+                // sldPaso.setMinorTickSpacing(1);
+                // sldPaso.setPaintTicks(true); // sin esta instruccion no se ven las marcas
                 sldPaso.setPaintLabels(true);
                 sldPaso.setSnapToTicks(true);
 
-                sldPaso.setPreferredSize(new Dimension(sldPaso.getPreferredSize().width, 30));
+                sldPaso.setPreferredSize(new Dimension(sldPaso.getPreferredSize().width, 40));
 
                 /* ------------------------------ Etiqueta Paso ----------------------------- */
                 lblPaso = new JLabel("Paso");
@@ -159,14 +159,18 @@ class PasoEjercicioAdicional7Tema10PanelPrincipal extends JPanel {
             private JSpinner spnLimSuperior;
             private JLabel lblLimiteSuperior;
 
+            private final String[] limiteInferior = { "100", "50", "20", "10", "0" };
+
             /* ------------------------------- Constructor ------------------------------ */
             public PanelJSpinner() {
                 /* ------------------------ JSpinner Límite superior ------------------------ */
-                spnLimSuperior = new JSpinner(new SpinnerNumberModel(100, 0, 100, 25));
+                // spnLimSuperior = new JSpinner(new SpinnerNumberModel(100, 0, 100, 25));
+                spnLimSuperior = new JSpinner(new miSpinnerModel());
+
                 JFormattedTextField field = ((JSpinner.DefaultEditor) spnLimSuperior.getEditor()).getTextField();
                 field.setEditable(false);
 
-                spnLimSuperior.setPreferredSize(new Dimension(spnLimSuperior.getPreferredSize().width, 30));
+                spnLimSuperior.setPreferredSize(new Dimension(spnLimSuperior.getPreferredSize().width + 20, 30));
 
                 /* ------------------------ Etiqueta Límite superior ------------------------ */
                 lblLimiteSuperior = new JLabel("Límite superior");
@@ -176,6 +180,21 @@ class PasoEjercicioAdicional7Tema10PanelPrincipal extends JPanel {
                 add(lblLimiteSuperior);
                 add(spnLimSuperior);
             }
+
+            private class miSpinnerModel extends SpinnerListModel {
+
+                public miSpinnerModel() {
+                    super(limiteInferior); 
+                }
+        
+                public Object getNextValue() {
+                    return super.getPreviousValue();
+                }
+        
+                public Object getPreviousValue() {
+                    return super.getNextValue();
+                }
+            } 
         }
     }
 }
