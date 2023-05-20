@@ -2,6 +2,7 @@ package Tema10InterfazGrafica.Ejercicio6Dibujo.Vista;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -13,8 +14,6 @@ import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
-
-import InterfazGráfica.MarcoCentrado;
 
 public class DibujoEjercicioAdicional6Tema10 {
 
@@ -34,7 +33,7 @@ class DibujoEjercicioAdicional6Tema10MarcoInicial extends JFrame {
         add(new DibujoEjercicioAdicional6Tema10PanelPrincipal());
 
         pack();
-        setSize(770, 380);
+        // setSize(770, 380);
         setLocationRelativeTo(null);
         setResizable(false);
         setVisible(true);
@@ -46,6 +45,10 @@ class DibujoEjercicioAdicional6Tema10PanelPrincipal extends JPanel {
     private PanelIzquierdoDibujo pnlIzquierdoDibujo;
     private PanelDerechoOpciones pnlDerechoOpciones;
 
+    private Graphics2D dibujo;
+    private int anchoTextoDibujo;
+    private int tamFuenteTextoDibujo;
+
     private final Color COLOR_BORDE_PANEL_DERECHO = new Color(39, 44, 252);
     private final int TAM_LINEAS_BORDE_PANEL_DERECHO = 2;
 
@@ -55,6 +58,12 @@ class DibujoEjercicioAdicional6Tema10PanelPrincipal extends JPanel {
 
         /* -------------------- Componente panel izquierdo dibujo ------------------- */
         pnlIzquierdoDibujo = new PanelIzquierdoDibujo();
+        // pnlIzquierdoDibujo.addMouseListener(new MouseAdapter() {
+        // @Override
+        // public void mouseClicked(MouseEvent e) {
+        // pnlIzquierdoDibujo.setTamFuenteTextoDibujo(30);
+        // }
+        // });
 
         /* -------------------- Componente panel derecho opciones ------------------- */
         pnlDerechoOpciones = new PanelDerechoOpciones();
@@ -64,16 +73,23 @@ class DibujoEjercicioAdicional6Tema10PanelPrincipal extends JPanel {
         /* -------------------------- Añadiendo componentes ------------------------- */
         add(pnlIzquierdoDibujo, BorderLayout.CENTER);
         add(pnlDerechoOpciones, BorderLayout.EAST);
+
     }
 
     /* ------------------------- Panel izquierdo dibujo ------------------------- */
     private class PanelIzquierdoDibujo extends JPanel {
-        private Graphics2D dibujo;
+
+        private final String TEXTO_DIBUJO = "Estamos aprendiendo Swing";
 
         /* ------------------------------- Constructor ------------------------------ */
-        // public PanelIzquierdoDibujo() {
+        public PanelIzquierdoDibujo() {
+            // Tamaño del texto dibujo más 20 a la izquierda y 20 a la derecha
+            anchoTextoDibujo = 426;
+            tamFuenteTextoDibujo = 16;
 
-        // }
+            setPreferredSize(new Dimension(anchoTextoDibujo, 380));
+
+        }
 
         /* --------------------------- Pintar componentes --------------------------- */
         @Override
@@ -82,16 +98,24 @@ class DibujoEjercicioAdicional6Tema10PanelPrincipal extends JPanel {
             dibujo = (Graphics2D) grafico;
             setBackground(Color.PINK);// color del panel
 
+            /* ----------------------------- Añadir dibujos ----------------------------- */
             addTexto();
         }
 
         /* ------------------------ Componente dibujo String ------------------------ */
         public void addTexto() {
-            // setForeground(Color.GREEN);//color de texto
             dibujo.setColor(Color.GREEN);// color del pincel
-            dibujo.setFont(new Font("Arial", Font.BOLD, 28));
-            dibujo.drawString("Estamos aprendiendo Swing", 20, 75);
+            dibujo.setFont(new Font("Arial", Font.BOLD, tamFuenteTextoDibujo));
+
+            // dibujo.getFontMetrics().stringWidth(TEXTO_DIBUJO) = 386
+            dibujo.drawString(TEXTO_DIBUJO, 20, 75);
+
         }
+
+        // public void setTamFuenteTextoDibujo(int nuevoTamFuente) {
+        //     tamFuenteTextoDibujo = nuevoTamFuente;
+        //     repaint();
+        // }
     }
 
     /* ------------------------- Panel derecho opciones ------------------------- */
@@ -103,6 +127,7 @@ class DibujoEjercicioAdicional6Tema10PanelPrincipal extends JPanel {
         /* ------------------------------- Constructor ------------------------------ */
         public PanelDerechoOpciones() {
             setLayout(new GridLayout(3, 1));
+            // setPreferredSize(new Dimension(570, 380));
 
             /* -------------------- Componente panel superior colores ------------------- */
             pnlSuperiorColores = new PanelSuperiorColores();
@@ -180,9 +205,13 @@ class DibujoEjercicioAdicional6Tema10PanelPrincipal extends JPanel {
 
                 for (int i = 0; i < nombreBotones.length; i++) {
                     radBotonesLista.add(new JRadioButton(nombreBotones[i]));
+                    // radBotonesLista.get(i).addItemListener(new JRadioButtonItemListenerTamLetra(
+                    // anchoTextoDibujo, tamFuenteTextoDibujo, pnlIzquierdoDibujo));
                     rdbRadioButton.add(radBotonesLista.get(i));
                     add(radBotonesLista.get(i));
                 }
+
+                radBotonesLista.get(2).setSelected(true);
             }
         }
     }
