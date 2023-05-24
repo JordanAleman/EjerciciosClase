@@ -69,6 +69,7 @@ class DibujoPanelPrincipal extends JPanel {
         /* ------------------------------- Constructor ------------------------------ */
         public PanelIzquierdoDibujo() {
             setPreferredSize(new Dimension(450, 385));
+            
 
             distancia_X_Elipse = DISTANCIA_X_ELIPSE_ORIGINAL;
             distancia_Y_Elipse = DISTANCIA_Y_ELIPSE_ORIGINAL;

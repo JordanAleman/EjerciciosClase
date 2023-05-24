@@ -4,26 +4,27 @@ import javax.swing.JPanel;
 
 import InterfazGráfica.MarcoCentrado;
 
-public class MenuEjercicioAdicional8Tema10 {
+public class Menu {
     
     public static void main(String[] args) {
-        new MenuEjercicioAdicional8Tema10MarcoInicial();
+        new MenuMarcoInicial();
     }
 }
 
 /* ------------------------------ Marco inicial ----------------------------- */
-class MenuEjercicioAdicional8Tema10MarcoInicial {
+class MenuMarcoInicial {
+    
     /* ------------------------------- Constructor ------------------------------ */
-    public MenuEjercicioAdicional8Tema10MarcoInicial() {
+    public MenuMarcoInicial() {
         MarcoCentrado marcoInicial = new MarcoCentrado(470, 280, "Ejercicio adicional 8");
-        marcoInicial.add(new MenuEjercicioAdicional8Tema10PanelPrincipal());
+        marcoInicial.add(new MenuPanelPrincipal());
         marcoInicial.setResizable(false);
         marcoInicial.setVisible(true);
     }
 }
 
 /* ----------------------------- Panel principal ---------------------------- */
-class MenuEjercicioAdicional8Tema10PanelPrincipal extends JPanel {
+class MenuPanelPrincipal extends JPanel {
     
 }
 
