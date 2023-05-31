@@ -1,0 +1,672 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "VistaSemaforo",
+            "request": "launch",
+            "mainClass": "VistaSemaforo",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "EjercicioMenuMain",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio8Menu.Vista.EjercicioMenuMain",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "EjercicioCalculadoraMain",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio14Calculadora.Vista.EjercicioCalculadoraMain",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "EjercicioManejaFicherosImagenesMain",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio13ManejaFicherosImagenes.Vista.EjercicioManejaFicherosImagenesMain",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "EjercicioMatrizBotonesMain",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio12MatrizBotones.Vista.EjercicioMatrizBotonesMain",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "EjercicioRistraBotonesMain",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio11RistraBotones.Vista.EjercicioRistraBotonesMain",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "EjercicioTableroMain",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio10Tablero.Vista.EjercicioTableroMain",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "BordeConGrabado",
+            "request": "launch",
+            "mainClass": "BordeConGrabado",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "EjercicioBordesMain",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio9Bordes.Vista.EjercicioBordesMain",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "S27Dialogos",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio8Menu.Vista.S27Dialogos",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "TableroEjercicioAdicional10Tema10",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio10Tablero.Vista.TableroEjercicioAdicional10Tema10",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "RistraBotonesEjercicioAdicional11Tema10",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio11RistraBotones.Vista.RistraBotonesEjercicioAdicional11Tema10",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MatrizBotonesEjercicioAdicional12Tema10",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio12MatrizBotones.Vista.MatrizBotonesEjercicioAdicional12Tema10",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "ManejoFicherosImagenesEjercicioAdicional13Tema10",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio13ManejaFicherosImagenes.Vista.ManejoFicherosImagenesEjercicioAdicional13Tema10",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "CalculadoraEjercicioAdicional14Tema10",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio14Calculadora.Vista.CalculadoraEjercicioAdicional14Tema10",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "CartasEjercicioAdicional15Tema10",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio15Cartas.Vista.CartasEjercicioAdicional15Tema10",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "AbejaBotonera",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio1AbejaBotonera.AbejaBotonera",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "PrimerFormularioTema10",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio2PrimerFormulario.PrimerFormularioTema10",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "TeclasTecladoTema10",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio3TeclasTeclado.TeclasTecladoTema10",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "CalculosEjercicioAdicional4Tema10",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio4Calculos.CalculosEjercicioAdicional4Tema10",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "CambiandoMensajesEjercicioAdicional5Tema10",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio5CambiandoMensajes.Vista.CambiandoMensajesEjercicioAdicional5Tema10",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "Dibujo",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio6Dibujo.Vista.Dibujo",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "Paso",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio7Paso.Vista.Paso",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MenuInicial",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio8Menu.Vista.MenuInicial",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "S26Menu",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio8Menu.Vista.S26Menu",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "BordesEjercicioAdicional9Tema10",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.Ejercicio9Bordes.Vista.BordesEjercicioAdicional9Tema10",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio0PruebaBotones",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.EjerciciosTema10.PrimerasPruebas.Ejercicio0PruebaBotones",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio1PruebaColoresFondo",
+            "request": "launch",
+            "mainClass": "Tema10InterfazGrafica.EjerciciosTema10.PrimerasPruebas.Ejercicio1PruebaColoresFondo",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainEjercicio12",
+            "request": "launch",
+            "mainClass": "Tema4InteraccionObjeto.Ejercicio12ClaseCuenta.MainEjercicio12",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "Main17Exponencial",
+            "request": "launch",
+            "mainClass": "Tema4InteraccionObjeto.Ejercicio17NumerosExponenciales.Main17Exponencial",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "App18Numero",
+            "request": "launch",
+            "mainClass": "Tema4InteraccionObjeto.Ejercicio18Numero.App18Numero",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainEjercicio19Carps",
+            "request": "launch",
+            "mainClass": "Tema4InteraccionObjeto.Ejercicio19Craps.MainEjercicio19Carps",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainEjercicio1RelojDigital",
+            "request": "launch",
+            "mainClass": "Tema4InteraccionObjeto.Ejercicio1RelojDigital.MainEjercicio1RelojDigital",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "AppEjercicio22",
+            "request": "launch",
+            "mainClass": "Tema4InteraccionObjeto.Ejercicio22Cuadrado.AppEjercicio22",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainGeneradorSeries",
+            "request": "launch",
+            "mainClass": "Tema4InteraccionObjeto.Ejercicio23GeneradorSeries.MainGeneradorSeries",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "App(1)",
+            "request": "launch",
+            "mainClass": "Tema4InteraccionObjeto.Ejercicio26PintarFigura.App",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainEjercicio2CirculoPunto",
+            "request": "launch",
+            "mainClass": "Tema4InteraccionObjeto.Ejercicio2CirculoPunto.MainEjercicio2CirculoPunto",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainEjercicio4",
+            "request": "launch",
+            "mainClass": "Tema4InteraccionObjeto.Ejercicio4SisUsCont.MainEjercicio4",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainEmbarque",
+            "request": "launch",
+            "mainClass": "Tema4InteraccionObjeto.Ejercicio7Embarque.MainEmbarque",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainWhile",
+            "request": "launch",
+            "mainClass": "Tema4InteraccionObjeto.EjerciciosTema4.Ejercicios2ºMatematicasWhile.MainWhile",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "AppEjercicio416BucleFor",
+            "request": "launch",
+            "mainClass": "Tema4InteraccionObjeto.EjerciciosTema4.Ejercicios416BucleFor.AppEjercicio416BucleFor",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "Main419Recursividad",
+            "request": "launch",
+            "mainClass": "Tema4InteraccionObjeto.EjerciciosTema4.Ejercicios419Recursividad.Main419Recursividad",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainExamenTema4",
+            "request": "launch",
+            "mainClass": "Tema4InteraccionObjeto.ExamenTema4.MainExamenTema4",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainCartonBingo",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.Ejercicio10Bingo.MainCartonBingo",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainPila",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.Ejercicio11Pila.MainPila",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainCadena",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.Ejercicio15Cadena.MainCadena",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainHistograma",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.Ejercicio1Histograma.MainHistograma",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainFrecuenciaDado",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.Ejercicio2FrecuenciaDado.MainFrecuenciaDado",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainCalculadora",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.Ejercicio3Calculadora.MainCalculadora",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainVagonTren",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.Ejercicio4TrenesVagones.MainVagonTren",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainCursoDai",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.Ejercicio5Alumno.MainCursoDai",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainSecuencia",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.Ejercicio6Secuencia.MainSecuencia",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainDemoRecursiva",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.Ejercicio7DemoRecursiva.MainDemoRecursiva",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainTestDosDimensiones",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.Ejercicio8TestDosDimensiones.MainTestDosDimensiones",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainMatriz",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.Ejercicio9Matriz.MainMatriz",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainGenerarArray",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.EjerciciosTema5.Ejercicio5_5PrimerasPruebasArray.MainGenerarArray",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainEjercicios5_1_6_Array",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.EjerciciosTema5.Ejercicios5_1_6_Array.MainEjercicios5_1_6_Array",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainContadorDias",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.EjerciciosTema5.Ejercicios5_1_7_Array.Ejercicio5_12Array.MainContadorDias",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainDiccionario",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.EjerciciosTema5.Ejercicios5_2_14_Array.MainDiccionario",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainArraySinRepetidos",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.EjerciciosTema5.Ejercicios5_4_19_Array.MainArraySinRepetidos",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainCursoPles",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.EjerciciosTema5.Ejercicios5_5_20_OrdenacionArray.MainCursoPles",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainInversiones",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.EjerciciosTema5.Ejercicios5_Extra_Inversiones.MainInversiones",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainSemaforo",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.EjerciciosTema5.Ejercicios_Enum.Ejercicios5_27_Semaforo.MainSemaforo",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainPalabra",
+            "request": "launch",
+            "mainClass": "Tema5Arrays.EjerciciosTema5.Ejercicios_Strings.Ejercicios5_24_Palabras.MainPalabra",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainEquipo",
+            "request": "launch",
+            "mainClass": "Tema6ArraysList.Ejercicio10JugadorContratoEquipo.MainEquipo",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainInterfazTextoEquipo",
+            "request": "launch",
+            "mainClass": "Tema6ArraysList.Ejercicio10JugadorContratoEquipo.MainInterfazTextoEquipo",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainInterfazTextoRestaurante",
+            "request": "launch",
+            "mainClass": "Tema6ArraysList.Ejercicio11Restaurante.MainInterfazTextoRestaurante",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainRestaurante",
+            "request": "launch",
+            "mainClass": "Tema6ArraysList.Ejercicio11Restaurante.MainRestaurante",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainUrna",
+            "request": "launch",
+            "mainClass": "Tema6ArraysList.Ejercicio1Bola.MainUrna",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainGrupoCadenas",
+            "request": "launch",
+            "mainClass": "Tema6ArraysList.Ejercicio2Cadena.MainGrupoCadenas",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainLibreria",
+            "request": "launch",
+            "mainClass": "Tema6ArraysList.Ejercicio3Libro.MainLibreria",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainSecuencia(1)",
+            "request": "launch",
+            "mainClass": "Tema6ArraysList.Ejercicio4Secuencia.MainSecuencia",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainClub",
+            "request": "launch",
+            "mainClass": "Tema6ArraysList.Ejercicio5Persona.MainClub",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainListaNombres",
+            "request": "launch",
+            "mainClass": "Tema6ArraysList.Ejercicio6GenerarConjunto.MainListaNombres",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainSerieMultiplos",
+            "request": "launch",
+            "mainClass": "Tema6ArraysList.Ejercicio7SerieMultiplos.MainSerieMultiplos",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainFrecuenciaNumeros",
+            "request": "launch",
+            "mainClass": "Tema6ArraysList.Ejercicio8FrecuenciaNumeros.MainFrecuenciaNumeros",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainTesauro",
+            "request": "launch",
+            "mainClass": "Tema6ArraysList.Ejercicio9Tesauro.MainTesauro",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainProducto",
+            "request": "launch",
+            "mainClass": "Tema7HerenciaYPolimorfismo.Ejercicio1ProductoTienda.MainProducto",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainReproductorMP3",
+            "request": "launch",
+            "mainClass": "Tema7HerenciaYPolimorfismo.Ejercicio3Fichero.MainReproductorMP3",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainElementoSistemaFicheros",
+            "request": "launch",
+            "mainClass": "Tema7HerenciaYPolimorfismo.Ejercicio4ElementoSistemaFicheros.MainElementoSistemaFicheros",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainFrecuenciaBigramas",
+            "request": "launch",
+            "mainClass": "Tema7HerenciaYPolimorfismo.Ejercicio6Bigrama.MainFrecuenciaBigramas",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainCD",
+            "request": "launch",
+            "mainClass": "Tema7HerenciaYPolimorfismo.Ejercicio7CD.MainCD",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainFigura",
+            "request": "launch",
+            "mainClass": "Tema7HerenciaYPolimorfismo.EjerciciosTema7.Ejercicio7_15Figura.MainFigura",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainCuenta",
+            "request": "launch",
+            "mainClass": "Tema7HerenciaYPolimorfismo.EjerciciosTema7.Ejercicio7_7Cuenta.MainCuenta",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainMaximo",
+            "request": "launch",
+            "mainClass": "Tema9ExcepcionesIO.Ejercicio1Maximo.MainMaximo",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainGestorArray",
+            "request": "launch",
+            "mainClass": "Tema9ExcepcionesIO.Ejercicio2GestorArrays.MainGestorArray",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainSumadorEnterosScanner",
+            "request": "launch",
+            "mainClass": "Tema9ExcepcionesIO.Ejercicio3SumadorEnterosScanner.MainSumadorEnterosScanner",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainVisualizadorEnteros",
+            "request": "launch",
+            "mainClass": "Tema9ExcepcionesIO.Ejercicio4VisualizadorEnteros.MainVisualizadorEnteros",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainTeatro",
+            "request": "launch",
+            "mainClass": "Tema9ExcepcionesIO.Ejercicio5GestorTeatro.MainTeatro",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainComandoType",
+            "request": "launch",
+            "mainClass": "Tema9ExcepcionesIO.Ejercicio6ComandoType.MainComandoType",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainIndice",
+            "request": "launch",
+            "mainClass": "Tema9ExcepcionesIO.Ejercicio8Indice.MainIndice",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainGestorFichero",
+            "request": "launch",
+            "mainClass": "Tema9ExcepcionesIO.EjerciciosTema9.Ejer2GestorFichero.MainGestorFichero",
+            "projectName": "EjerciciosClase_7bc28474"
+        },
+        {
+            "type": "java",
+            "name": "MainListaNumeros",
+            "request": "launch",
+            "mainClass": "Tema9ExcepcionesIO.EjerciciosTema9.Ejer3ListaNumeros.MainListaNumeros",
+            "projectName": "EjerciciosClase_7bc28474"
+        }
+    ]
+}

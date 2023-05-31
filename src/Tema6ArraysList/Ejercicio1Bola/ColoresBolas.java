@@ -1,5 +1,5 @@
 package Tema6ArraysList.Ejercicio1Bola;
 
-public enum Color {
+public enum ColoresBolas {
     BLANCO, NEGRO;
 }

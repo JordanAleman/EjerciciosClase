@@ -1,18 +1,18 @@
 package Tema6ArraysList.Ejercicio1Bola;
 
 public class Bola {
-    private Color bola;
+    private ColoresBolas bola;
 
     /* ------------------------------- Constructor ------------------------------ */
     public Bola() {
-        bola = Color.BLANCO;
+        bola = ColoresBolas.BLANCO;
 
         if (((int) (Math.random() * 10000) % 2) == 1) 
-            bola = Color.NEGRO;    
+            bola = ColoresBolas.NEGRO;    
     }
 
     /* --------------------------------- Getter --------------------------------- */
-    public Color getBola() {
+    public ColoresBolas getBola() {
         return bola;
     }
 
@@ -28,11 +28,11 @@ public class Bola {
 
     /* ----------------------------- Reconocer color ---------------------------- */
     public boolean esBlanca() {
-        return bola == Color.BLANCO;
+        return bola == ColoresBolas.BLANCO;
     }
 
     public boolean esNegra() {
-        return bola == Color.NEGRO;
+        return bola == ColoresBolas.NEGRO;
     }
 
 }

@@ -53,7 +53,7 @@ class DibujoPanelPrincipal extends JPanel {
 
     /* ------------------------- Panel izquierdo dibujo ------------------------- */
     private class PanelIzquierdoDibujo extends JPanel {
-        private int tamFuenteTextoDibujo = 16;
+        private int tamFuenteTextoDibujo = 30;
         private int strokeRectangulo = 1;
         private Color colorElipse = Color.BLACK;
 
@@ -70,7 +70,6 @@ class DibujoPanelPrincipal extends JPanel {
         public PanelIzquierdoDibujo() {
             setPreferredSize(new Dimension(450, 385));
             
-
             distancia_X_Elipse = DISTANCIA_X_ELIPSE_ORIGINAL;
             distancia_Y_Elipse = DISTANCIA_Y_ELIPSE_ORIGINAL;
             tamElipse = TAM_ELIPSE_ORIGINAL;
@@ -253,7 +252,7 @@ class DibujoPanelPrincipal extends JPanel {
                     add(radBotonesLista.get(i));
                 }
 
-                radBotonesLista.get(2).setSelected(true);
+                radBotonesLista.get(5).setSelected(true);
             }
         }
     }

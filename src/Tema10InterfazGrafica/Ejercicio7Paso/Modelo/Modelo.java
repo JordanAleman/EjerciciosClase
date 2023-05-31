@@ -10,7 +10,7 @@ public class Modelo {
     public Modelo() {
         this.cantidad = 0;
         this.paso = 1;
-        this.limiteInferior = 0;
+        this.limiteInferior = -100;
         this.limiteSuperior = 100;
     }
 
